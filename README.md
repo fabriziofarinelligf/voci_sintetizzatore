@@ -63,5 +63,14 @@ Prova senza modello e senza Gemini: `VOCI_FAKE_TTS=1` (tono al posto della voce)
 !python voci_sintetizzatore/sintetizza_pagina.py --device cuda:0 --normalizza --tempo 1.1 blocchi.json uscita
 ```
 
+## Su Kaggle (2 GPU T4, dal portatile)
+`kaggle_lancia.py` usa la CLI `~/.local/bin/kaggle` (token in `~/.kaggle/access_token`) e il kernel privato `fabriziofarinelli/voci-pagine`, una versione nuova a ogni invio. Lo script generato clona il repo al commit locale, quindi prima serve `git push`.
+1. `python kaggle_lancia.py invia --voce a2 --normalizza --tempo 1.1 p42.json p43.json ...`: divide le pagine in due code, una per GPU, e stampa la stima delle ore; rifiuta un lotto oltre 10 h (la sessione Kaggle ne dura al massimo 12). `--prova` scrive la cartella con script e metadata e li stampa, senza inviare.
+2. `python kaggle_lancia.py attendi [--ogni 60] [--max-ore 9]`: controlla lo stato finché è COMPLETE o fallito.
+3. `python kaggle_lancia.py scarica DEST`: scarica `DEST/<pagina>-lavoro/` (frasi e manifest) e il `.log`, e per ogni pagina conta le frasi del manifest e i wav.
+4. In locale, per ogni pagina, il giro dal passo 2: `python monta.py DEST/p42-lavoro`, poi revisione e correzioni; le frasi da rifare (`--solo`) si rifanno in locale o con un nuovo invio.
+
+Prova dello script generato senza Kaggle: `VOCI_FAKE_TTS=1 VOCI_KAGGLE_BASE=DIR VOCI_REPO=. python CARTELLA_PROVA/voci_pagine.py`.
+
 ## Regole
 Non clonare con questi script la voce di una persona reale senza il suo consenso. Nei contenuti per l'esterno dichiara che la voce è sintetica.

@@ -102,5 +102,17 @@ def test_giro():
     assert all(os.path.exists(os.path.join(d, f"vecchio-t{t}.{e}")) for t in ("100", "120") for e in ("wav", "json"))
     print(rep)
 
+    # kaggle_lancia: script generato (--prova) eseguito in locale su due code, controllo delle frasi, lotto troppo lungo rifiutato
+    js(os.path.join(d, "p41.json"), BLOCCHI[:1]); js(os.path.join(d, "lunga.json"), ["parola " * 40000])
+    K = os.path.join(d, "kaggle"); ENV.update(TMPDIR=d, VOCI_KAGGLE_BASE=K, VOCI_REPO=REPO)
+    out = run("kaggle_lancia.py", "invia", "--prova", "--normalizza", "--voce", "a2", os.path.join(d, "p40.json"), os.path.join(d, "p41.json"))
+    script = out.split("cartella: ")[1].split("\n")[0] + "/voci_pagine.py"
+    assert '"id": "fabriziofarinelli/voci-pagine"' in out and "--normalizza" in open(script).read()
+    assert "pagine fallite: nessuna" in run(script)
+    assert js(f"{K}/p40-lavoro/manifest.json")["voce"] == "a2" and len(os.listdir(f"{K}/p41-lavoro/frasi")) == 2
+    out = run("-c", f"import kaggle_lancia as k; k.controlla({K!r})")
+    assert "p40-lavoro: 5/5 frasi" in out and "p41-lavoro: 2/2 frasi" in out, out
+    assert "lotto troppo lungo" in run("kaggle_lancia.py", "invia", "--prova", os.path.join(d, "lunga.json"), ok=False)
+
 if __name__ == "__main__":
     test_giro(); print("OK")

@@ -51,7 +51,8 @@ def chiedi(audio_mp3, prompt, schema):
     from google import genai
     from google.genai import types, errors
     if not os.environ.get("GEMINI_API_KEY"): sys.exit("manca GEMINI_API_KEY nell'ambiente")
-    client = genai.Client(api_key=os.environ["GEMINI_API_KEY"])
+    # google-genai 3.x usa l'API v1, che rifiuta response_schema ("JSON mode is not enabled for api version v1"): serve v1beta
+    client = genai.Client(api_key=os.environ["GEMINI_API_KEY"], http_options=types.HttpOptions(api_version="v1beta"))
     parti = [types.Part.from_bytes(data=open(audio_mp3, "rb").read(), mime_type="audio/mp3"), prompt]
     cfg = types.GenerateContentConfig(response_mime_type="application/json", response_schema=schema)
     for modello in MODELLI:
@@ -62,7 +63,7 @@ def chiedi(audio_mp3, prompt, schema):
                 return modello, json.loads(r.text)
             except errors.APIError as e:
                 if e.code == 429: sys.exit(f"{modello}: quota esaurita (429), riprova più tardi")
-                print(f"{modello}: errore {e.code}", flush=True)
+                print(f"{modello}: errore {e.code} {e.status}: {e.message}", flush=True)
                 if e.code != 503: break  # modello inesistente o altro: si passa al successivo
     sys.exit("nessun modello Gemini ha risposto")
 

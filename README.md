@@ -20,6 +20,7 @@ Su Google Colab con GPU basta `pip install qwen-tts`. Il modello (circa 4 GB) si
   `python voce_qwen.py [--voce a1] [--tempo 0.85] [--device cuda:0] s1.txt s2.txt`
 - Testo a blocchi (JSON con una lista di stringhe → `.wav` + `.json` con inizio e fine di ogni blocco):
   `python sintetizza_pagina.py [--voce a1] [--tempo 1.2] [--device cuda:0] blocchi.json uscita`
+  (lascia le frasi e il manifest in `uscita-frasi/`, o in `--lavoro DIR`, pronte per il giro con revisione)
 
 ## Voce nuova
 `python crea_voce.py NOME "DESCRIZIONE IN INGLESE" [--seme 42] [--device cuda:0]` crea `voci/NOME/` con VoiceDesign.
@@ -28,6 +29,25 @@ Su Google Colab con GPU basta `pip install qwen-tts`. Il modello (circa 4 GB) si
 - `--pause 0.3,0.65,0.75`: secondi dopo i due punti, a fine frase, a fine blocco.
 - `--normalizza`: numeri in lettere e sigle lettera per lettera (`normalizza.py`, serve `pip install num2words`).
 - `--tempo 1.1,1.2`: una o più velocità dallo stesso audio.
+
+## Giro con revisione Gemini
+Gemini ascolta la pagina e segnala solo le frasi che non vanno (numero della frase, parola esatta, un'azione); si rifanno solo quelle. Sintesi e revisione possono stare su macchine diverse: si sposta la cartella di lavoro (`LAVORO`), `monta.py` non usa il modello e gira anche senza GPU.
+
+1. `python sintetizza.py --normalizza --tempo 1.1 --voce a2 pagina40.json LAVORO` (macchina con il modello): `LAVORO/frasi/NNN.wav` + `LAVORO/manifest.json`
+2. `python monta.py LAVORO`: `LAVORO/pagina.wav` + `LAVORO/pagina.json` (formato dell'app) e i secondi di ogni frase nel manifest
+3. `GEMINI_API_KEY=... python revisione.py LAVORO`: `LAVORO/revisione-1.json` (voti e problemi)
+4. `python correggi.py LAVORO LAVORO/revisione-1.json`: applica i problemi di gravità 2-3, scrive `modifiche-1.json` e stampa il comando del passo 5; gli errori del manuale vanno in `errori-testo.md`, l'audio resta com'è
+5. `python sintetizza.py --solo 3,7,12 LAVORO` (macchina con il modello)
+6. `python monta.py LAVORO`
+7. `python revisione.py --verifica LAVORO`: Gemini riascolta solo le frasi cambiate, `verifica-1.json`; le correzioni risolte diventano regole candidate
+8. `python report.py LAVORO`: riepilogo in italiano
+
+Al massimo due giri di correzione per pagina (`correggi.py` rifiuta il terzo); il secondo riparte dal passo 3 e scrive `revisione-2.json`.
+Azioni: `rigenera` (stesso testo, seme + 1), `riscrivi` (testo letto nuovo), `inglese` (frase letta in inglese), `pausa` (secondi dopo la frase, 0,2-1,5), `errore_testo` (refuso del manuale, solo annotato).
+
+`regole.json` raccoglie quello che il giro ha imparato e vale in ogni sintesi nuova, dopo `--normalizza`: `sostituzioni` (parola o gruppo di parole intero `da` → `a`) e `inglese_tra_virgolette` (una frase che è tutta una citazione tra virgolette dritte o “ ” si legge in inglese, senza normalizza). Le candidate stanno in `regole-proposte.json`: `python regole.py lista`, poi `approva N` o `scarta N`; nessuna si approva da sola.
+
+Prova senza modello e senza Gemini: `VOCI_FAKE_TTS=1` (tono al posto della voce) e `revisione.py --risposta-finta R.json`; il giro intero è in `python tests/test_giro.py`.
 
 ## Velocità misurate
 | Macchina | Rapporto calcolo/audio |

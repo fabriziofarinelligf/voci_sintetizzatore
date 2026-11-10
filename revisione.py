@@ -34,7 +34,7 @@ Regole:
   riscrivi = valore è il testo nuovo da far leggere per l'intera frase (per esempio un punto in più, una parola scritta come si pronuncia);
   inglese = la frase è una citazione in inglese: va letta con la lingua inglese (valore vuoto);
   pausa = valore è la nuova pausa dopo la frase, in secondi (per esempio "0.9");
-  errore_testo = è sbagliato il testo del manuale stesso (refuso, parola mancante): valore è il testo corretto; l'audio non si corregge.
+  errore_testo = è sbagliato il testo del manuale stesso (refuso, parola mancante): valore è il testo corretto dell'intera frase, come va scritto nel manuale; si annota e la voce lo rilegge.
 - voti da 1 a 10 sull'intera pagina."""
 
 PROMPT_VERIFICA = """Sei un direttore del doppiaggio di audiolibri italiani. Nell'audio allegato ci sono solo alcune frasi di una pagina, rilette dopo una correzione; ognuna è preceduta da 0,6 secondi di silenzio.

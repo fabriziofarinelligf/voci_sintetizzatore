@@ -1,8 +1,10 @@
 """Fase 4 del giro: applica al manifest i problemi di gravità 2 o 3 di una revisione. Al massimo 2 giri di correzione per pagina.
 Uso: python correggi.py LAVORO LAVORO/revisione-N.json
 rigenera -> seme + 1; riscrivi -> testo_letto = valore; inglese -> lingua English; pausa -> pausa_dopo = valore (0,2-1,5 s);
-errore_testo -> riga in LAVORO/errori-testo.md, audio invariato. Scrive LAVORO/modifiche-N.json e stampa il comando sintetizza --solo."""
+errore_testo -> riga in LAVORO/errori-testo.md e testo_letto = valore dopo normalizza e regole (come in sintetizza), così l'audio si rifà. Scrive LAVORO/modifiche-N.json e stampa il comando sintetizza --solo."""
 import glob, json, os, sys
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import regole as R
 
 MAX_GIRI = 2
 
@@ -16,8 +18,9 @@ def correggi(lavoro, revisione):
         if not f or p["gravita"] < 2: continue
         a, v = p["azione"], p["valore"]
         if a == "errore_testo":
-            errori.append(f"- pagina {m['pagina']}, frase {f['id']}: «{f['testo_originale']}» → «{v}» ({p['problema']})\n"); continue
-        if a == "rigenera":
+            errori.append(f"- pagina {m['pagina']}, frase {f['id']}: «{f['testo_originale']}» → «{v}» ({p['problema']})\n")
+            campo, nuovo = "testo_letto", R.prepara(v, f["lingua"], m["normalizza"], R.regole())
+        elif a == "rigenera":
             if f["id"] in rigenerate: continue
             rigenerate.add(f["id"]); campo, nuovo = "seme", f["seme"] + 1
         elif a == "riscrivi": campo, nuovo = "testo_letto", v

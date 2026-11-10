@@ -43,24 +43,26 @@ def test_giro():
     P = lambda i, az, v="", g=2: {"frase_id": i, "parola": "x", "problema": f"p{i}{az}", "gravita": g, "azione": az, "valore": v}
     voti = {k: 7 for k in ("naturalezza", "ritmo", "intonazione", "pause", "pronuncia_it", "pronuncia_en", "ascolto_lungo")}
     js(f"{d}/r1.json", {"voti": voti, "problemi": [P(1, "rigenera"), P(3, "riscrivi", "Il progect manager pianifica.", 3), P(5, "inglese"),
-        P(4, "pausa", "3"), P(2, "errore_testo", "Leggile tutte quante."), P(4, "rigenera", g=1), P(99, "rigenera")]})
+        P(4, "pausa", "3"), P(2, "errore_testo", "Leggile tutte e 3."), P(4, "rigenera", g=1), P(99, "rigenera")]})
     run("revisione.py", "--risposta-finta", f"{d}/r1.json", L)
     r1 = js(f"{L}/revisione-1.json"); assert len(r1["problemi"]) == 6 and r1["scartati"] == 1
 
     # correggi: ogni azione, gravità 1 ignorata, comando --solo
     out = run("correggi.py", L, f"{L}/revisione-1.json")
-    assert f"--solo 1,3,5 {L}" in out, out
+    assert f"--solo 1,2,3,5 {L}" in out, out
     ff = js(f"{L}/manifest.json")["frasi"]
     assert ff[0]["seme"] == 43 and ff[2]["testo_letto"] == "Il progect manager pianifica." and ff[4]["lingua"] == "English"
-    assert ff[3]["pausa_dopo"] == 1.5 and ff[3]["seme"] == 42 and ff[1]["testo_letto"] == "leggile tutte."
-    assert "frase 2: «leggile tutte.» → «Leggile tutte quante.»" in open(f"{L}/errori-testo.md").read()
-    assert len(js(f"{L}/modifiche-1.json")) == 4
+    assert ff[3]["pausa_dopo"] == 1.5 and ff[3]["seme"] == 42 and ff[1]["testo_letto"] == "Leggile tutte e tre."
+    assert "frase 2: «leggile tutte.» → «Leggile tutte e 3.»" in open(f"{L}/errori-testo.md").read()
+    mod = js(f"{L}/modifiche-1.json"); assert len(mod) == 5
+    assert {"frase_id": 2, "campo": "testo_letto", "prima": "leggile tutte.", "dopo": "Leggile tutte e tre.", "azione": "errore_testo",
+            "parola": "x", "problema": "p2errore_testo"} in mod
 
     # --solo riscrive solo le frasi indicate
     prima = {i: md5(f"{L}/frasi/{i:03d}.wav") for i in range(1, 6)}
-    run("sintetizza.py", "--solo", "1,3,5", L)
+    run("sintetizza.py", "--solo", "1,2,3,5", L)
     dopo = {i: md5(f"{L}/frasi/{i:03d}.wav") for i in range(1, 6)}
-    assert [i for i in prima if prima[i] != dopo[i]] == [1, 3, 5], (prima, dopo)
+    assert [i for i in prima if prima[i] != dopo[i]] == [1, 2, 3, 5], (prima, dopo)
     run("monta.py", L)
     assert js(f"{L}/pagina.json")["blocchi"][-1][1] == js(f"{L}/pagina.json")["durata"]
 
@@ -68,7 +70,7 @@ def test_giro():
     js(f"{d}/v1.json", {"esiti": [{"frase_id": 1, "risolto": True, "nota": ""}, {"frase_id": 3, "risolto": True, "nota": ""},
                                   {"frase_id": 5, "risolto": False, "nota": "Plan ancora italiano"}, {"frase_id": 4, "risolto": True, "nota": ""}]})
     run("revisione.py", "--verifica", "--risposta-finta", f"{d}/v1.json", L)
-    v = js(f"{L}/verifica-1.json"); assert v["frasi"] == [1, 3, 5] and len(v["esiti"]) == 3
+    v = js(f"{L}/verifica-1.json"); assert v["frasi"] == [1, 2, 3, 5] and len(v["esiti"]) == 3
     prop = js(f"{d}/regole-proposte.json")
     assert [(c["tipo"], c["da"], c["a"]) for c in prop] == [("sostituzione", "project", "progect")] and prop[0]["pagina"] == "p40"
     assert not os.path.exists(f"{d}/regole.json")  # niente approvazione automatica
@@ -95,7 +97,7 @@ def test_giro():
 
     # report e vecchio comando unico
     rep = run("report.py", L)
-    assert "giro 1: 6 problemi" in rep and "2/3 frasi risolte" in rep and "errori nel testo del manuale: 1" in rep, rep
+    assert "giro 1: 6 problemi" in rep and "2/4 frasi risolte" in rep and "errori nel testo del manuale: 1" in rep, rep
     run("sintetizza_pagina.py", "--tempo", "1.0,1.2", os.path.join(d, "p40.json"), os.path.join(d, "vecchio"))
     assert all(os.path.exists(os.path.join(d, f"vecchio-t{t}.{e}")) for t in ("100", "120") for e in ("wav", "json"))
     print(rep)

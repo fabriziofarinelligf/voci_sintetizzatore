@@ -36,14 +36,14 @@ Gemini ascolta la pagina e segnala solo le frasi che non vanno (numero della fra
 1. `python sintetizza.py --normalizza --tempo 1.1 --voce a2 pagina40.json LAVORO` (macchina con il modello): `LAVORO/frasi/NNN.wav` + `LAVORO/manifest.json`
 2. `python monta.py LAVORO`: `LAVORO/pagina.wav` + `LAVORO/pagina.json` (formato dell'app) e i secondi di ogni frase nel manifest
 3. `GEMINI_API_KEY=... python revisione.py LAVORO`: `LAVORO/revisione-1.json` (voti e problemi)
-4. `python correggi.py LAVORO LAVORO/revisione-1.json`: applica i problemi di gravità 2-3, scrive `modifiche-1.json` e stampa il comando del passo 5; gli errori del manuale vanno in `errori-testo.md`, l'audio resta com'è
+4. `python correggi.py LAVORO LAVORO/revisione-1.json`: applica i problemi di gravità 2-3, scrive `modifiche-1.json` e stampa il comando del passo 5; gli errori del manuale vanno anche in `errori-testo.md`
 5. `python sintetizza.py --solo 3,7,12 LAVORO` (macchina con il modello)
 6. `python monta.py LAVORO`
 7. `python revisione.py --verifica LAVORO`: Gemini riascolta solo le frasi cambiate, `verifica-1.json`; le correzioni risolte diventano regole candidate
 8. `python report.py LAVORO`: riepilogo in italiano
 
 Al massimo due giri di correzione per pagina (`correggi.py` rifiuta il terzo); il secondo riparte dal passo 3 e scrive `revisione-2.json`.
-Azioni: `rigenera` (stesso testo, seme + 1), `riscrivi` (testo letto nuovo), `inglese` (frase letta in inglese), `pausa` (secondi dopo la frase, 0,2-1,5), `errore_testo` (refuso del manuale, solo annotato).
+Azioni: `rigenera` (stesso testo, seme + 1), `riscrivi` (testo letto nuovo), `inglese` (frase letta in inglese), `pausa` (secondi dopo la frase, 0,2-1,5), `errore_testo` (refuso del manuale: annotato in `errori-testo.md` e riletto col testo corretto, dopo `--normalizza` e regole).
 
 `regole.json` raccoglie quello che il giro ha imparato e vale in ogni sintesi nuova, dopo `--normalizza`: `sostituzioni` (parola o gruppo di parole intero `da` → `a`) e `inglese_tra_virgolette` (una frase che è tutta una citazione tra virgolette dritte o “ ” si legge in inglese, senza normalizza). Le candidate stanno in `regole-proposte.json`: `python regole.py lista`, poi `approva N` o `scarta N`; nessuna si approva da sola.
 

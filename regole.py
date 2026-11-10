@@ -26,6 +26,13 @@ def applica(testo, r):
         testo = re.sub(rf"(?<!\w){re.escape(s['da'])}(?!\w)", lambda m: s["a"], testo)
     return testo
 
+def prepara(testo, lingua, normalizza, r):
+    """Testo che la voce legge: normalizza.py (non per l'inglese), poi le sostituzioni di regole.json."""
+    if normalizza and lingua != "English":
+        from normalizza import normalizza as norm
+        testo = norm(testo)
+    return applica(testo, r)
+
 def inglese(testo, r):
     return r["inglese_tra_virgolette"] and bool(CITAZIONE.match(testo))
 

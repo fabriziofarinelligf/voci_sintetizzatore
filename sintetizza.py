@@ -13,15 +13,12 @@ def frasi_pagina(blocchi, pause, normalizza=False):
     """Divide i blocchi in frasi e prepara il testo da leggere (senza sintesi)."""
     p_duepunti, p_frase, p_blocco = (float(x) for x in pause.split(","))
     r = R.regole(); out = []
-    if normalizza:
-        from normalizza import normalizza as norm
     for b, testo in enumerate(blocchi):
         ff = [f for f in FRASE.split(testo) if f.strip()]
         for k, f in enumerate(ff):
-            en = R.inglese(f, r)
-            letto = R.applica(norm(f) if normalizza and not en else f, r)
-            out.append({"id": len(out) + 1, "blocco": b, "testo_originale": f, "testo_letto": letto,
-                        "lingua": "English" if en else "Italian", "seme": 42,
+            lingua = "English" if R.inglese(f, r) else "Italian"
+            out.append({"id": len(out) + 1, "blocco": b, "testo_originale": f, "testo_letto": R.prepara(f, lingua, normalizza, r),
+                        "lingua": lingua, "seme": 42,
                         "pausa_dopo": p_blocco if k == len(ff) - 1 else p_duepunti if f.rstrip().endswith(":") else p_frase})
     return out
 

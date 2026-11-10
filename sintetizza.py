@@ -3,7 +3,7 @@ Uso: python sintetizza.py [--voce a1] [--tempo 1.1] [--pause 0.3,0.65,0.75] [--n
      python sintetizza.py --solo 3,7,12 [--device ...] LAVORO   (rifà solo quelle frasi dai campi del manifest: testo_letto, lingua, seme)
 Scrive LAVORO/manifest.json {voce, tempo, pause, normalizza, pagina, n_blocchi, frasi: [{id, blocco, testo_originale, testo_letto, lingua, seme, pausa_dopo, wav, durata}]}.
 testo_letto = testo dopo normalizza.py e regole.json. VOCI_FAKE_TTS=1: niente modello, un tono lungo quanto il testo (per i test)."""
-import argparse, json, os, re, sys, time, numpy as np, soundfile as sf
+import argparse, json, os, re, sys, time, zlib, numpy as np, soundfile as sf
 QUI = os.path.dirname(os.path.abspath(__file__)); sys.path.insert(0, QUI)
 import regole as R
 
@@ -30,7 +30,8 @@ def motore(voce, device="cpu", threads=0):
     if os.environ.get("VOCI_FAKE_TTS") == "1":
         def finto(testo, lingua, seme):
             sr = 24000; t = np.arange(int(0.05 * len(testo) * sr)) / sr
-            return (0.3 * np.sin(2 * np.pi * (200 + seme % 50 + (lingua == "English") * 100) * t)).astype(np.float32), sr
+            hz = 200 + seme % 50 + (lingua == "English") * 100 + zlib.crc32(testo.encode()) % 50  # testo, seme o lingua diversi -> audio diverso
+            return (0.3 * np.sin(2 * np.pi * hz * t)).astype(np.float32), sr
         return finto
     import torch
     from qwen_tts import Qwen3TTSModel

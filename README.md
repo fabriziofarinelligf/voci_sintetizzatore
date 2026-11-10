@@ -5,7 +5,8 @@ Voci sintetiche italiane generate in locale con [Qwen3-TTS](https://huggingface.
 ## Voci
 | Nome | Adatta a |
 |---|---|
-| `a1` | video di istruzioni; per i libri è lenta (`--tempo 1.15-1.25`) |
+| `a1` | video di istruzioni; per i libri è lenta (`--tempo 1.1-1.2`) |
+| `a2` | lettura di testi di studio (descrizione didattica suggerita da Gemini) |
 
 ## Installazione
 ```
@@ -20,6 +21,14 @@ Su Google Colab con GPU basta `pip install qwen-tts`. Il modello (circa 4 GB) si
 - Testo a blocchi (JSON con una lista di stringhe → `.wav` + `.json` con inizio e fine di ogni blocco):
   `python sintetizza_pagina.py [--voce a1] [--tempo 1.2] [--device cuda:0] blocchi.json uscita`
 
+## Voce nuova
+`python crea_voce.py NOME "DESCRIZIONE IN INGLESE" [--seme 42] [--device cuda:0]` crea `voci/NOME/` con VoiceDesign.
+
+## Opzioni di lettura
+- `--pause 0.3,0.65,1.0`: secondi dopo i due punti, a fine frase, a fine blocco.
+- `--normalizza`: numeri in lettere e sigle lettera per lettera (`normalizza.py`, serve `pip install num2words`).
+- `--tempo 1.1,1.2`: una o più velocità dallo stesso audio.
+
 ## Velocità misurate
 | Macchina | Rapporto calcolo/audio |
 |---|---|
@@ -30,8 +39,8 @@ Su Google Colab con GPU basta `pip install qwen-tts`. Il modello (circa 4 GB) si
 ## Su Google Colab
 ```
 !git clone -q https://github.com/fabriziofarinelligf/voci_sintetizzatore.git
-!pip install -q qwen-tts
-!python voci_sintetizzatore/sintetizza_pagina.py --device cuda:0 blocchi.json uscita
+!pip install -q qwen-tts num2words
+!python voci_sintetizzatore/sintetizza_pagina.py --device cuda:0 --normalizza --tempo 1.1 blocchi.json uscita
 ```
 
 ## Regole

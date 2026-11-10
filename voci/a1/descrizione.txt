@@ -1,0 +1,3 @@
+Baritono italiano liscio e vellutato, voce maschile matura, tono rilassato e un po' ironico, dizione chiara.
+Creata con Qwen3-TTS VoiceDesign (descrizione: "A deep, warm, smooth and velvety Italian male baritone voice, middle-aged, relaxed and ironic tone, calm pace like a professional film dubbing actor, very clear and precise diction.", seme 42), estrazione scelta il 2026-11-10.
+Adatta a: video di istruzioni. Per la lettura di libri è lenta: usare --tempo 1.15-1.25 o un'altra voce.

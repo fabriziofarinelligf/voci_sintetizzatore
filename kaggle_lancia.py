@@ -10,7 +10,7 @@ Sessione Kaggle max 12 h: invia rifiuta un lotto stimato oltre 10 h (2,3 s di ca
 import argparse, glob, json, os, subprocess, sys, tempfile, time
 
 QUI = os.path.dirname(os.path.abspath(__file__))
-KAGGLE, KERNEL = os.path.expanduser("~/.local/bin/kaggle"), "fabriziofarinelli/voci-pagine"
+KAGGLE, KERNEL = os.path.expanduser("~/.local/bin/kaggle"), os.environ.get("VOCI_KERNEL", "fabriziofarinelli/voci-pagine")  # più sessioni: VOCI_KERNEL=fabriziofarinelli/voci-pagine-2
 REPO_URL = "https://github.com/fabriziofarinelligf/voci_sintetizzatore.git"
 S_CALCOLO, S_AUDIO, MAX_ORE, CARICA = 2.3, 0.09, 10, 120  # CARICA: s per pagina a caricare il modello (stima)
 

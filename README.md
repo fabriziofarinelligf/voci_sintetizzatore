@@ -25,7 +25,7 @@ Su Google Colab con GPU basta `pip install qwen-tts`. Il modello (circa 4 GB) si
 `python crea_voce.py NOME "DESCRIZIONE IN INGLESE" [--seme 42] [--device cuda:0]` crea `voci/NOME/` con VoiceDesign.
 
 ## Opzioni di lettura
-- `--pause 0.3,0.65,1.0`: secondi dopo i due punti, a fine frase, a fine blocco.
+- `--pause 0.3,0.65,0.75`: secondi dopo i due punti, a fine frase, a fine blocco.
 - `--normalizza`: numeri in lettere e sigle lettera per lettera (`normalizza.py`, serve `pip install num2words`).
 - `--tempo 1.1,1.2`: una o più velocità dallo stesso audio.
 

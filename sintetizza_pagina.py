@@ -1,12 +1,12 @@
 """Testo a blocchi letto con una voce del repo, frase per frase, con pausa secondo la punteggiatura.
-Uso: python sintetizza_pagina.py [--voce a1] [--tempo 1.1[,1.2]] [--pause 0.3,0.65,1.0] [--normalizza] [--device cuda:0 | --threads 10] BLOCCHI.json USCITA
+Uso: python sintetizza_pagina.py [--voce a1] [--tempo 1.1[,1.2]] [--pause 0.3,0.65,0.75] [--normalizza] [--device cuda:0 | --threads 10] BLOCCHI.json USCITA
 BLOCCHI.json = lista di stringhe. Per ogni tempo scrive USCITA[-tNNN].wav e .json {voce, tempo, durata, blocchi: [[inizio, fine], ...]}.
---pause = dopo due punti, dopo fine frase (. ; ! ?), dopo fine blocco (titoli, didascalie). Default dai consigli di Gemini.
+--pause = dopo due punti, dopo fine frase (. ; ! ?), dopo fine blocco (titoli, didascalie). Default: Gemini per virgola e frase, 0,75 a fine blocco scelto da Fabrizio.
 --normalizza = numeri in lettere e sigle lettera per lettera (normalizza.py).
 --tempo > 1 accelera senza cambiare il timbro (ffmpeg atempo); i tempi dei blocchi sono già divisi per il tempo."""
 import argparse, json, os, re, subprocess, tempfile, time, numpy as np, soundfile as sf, torch
 from qwen_tts import Qwen3TTSModel
-ap = argparse.ArgumentParser(); ap.add_argument("--voce", default="a1"); ap.add_argument("--tempo", default="1.0"); ap.add_argument("--pause", default="0.3,0.65,1.0"); ap.add_argument("--normalizza", action="store_true")
+ap = argparse.ArgumentParser(); ap.add_argument("--voce", default="a1"); ap.add_argument("--tempo", default="1.0"); ap.add_argument("--pause", default="0.3,0.65,0.75"); ap.add_argument("--normalizza", action="store_true")
 ap.add_argument("--device", default="cpu"); ap.add_argument("--threads", type=int, default=0); ap.add_argument("blocchi"); ap.add_argument("uscita")
 a = ap.parse_args()
 QUI = os.path.dirname(os.path.abspath(__file__)); V = os.path.join(QUI, "voci", a.voce)

@@ -27,6 +27,7 @@ Questo file si rigenera con `python regole.py vocabolario`: non modificarlo a ma
 | l'11ª | l'undicesima | Allucinazione nella lettura del testo: legge 'Blondeta' anziché 'l'undicesima'. | p91 |
 | L'11ª | l'undicesima | Letto erroneamente come 'undipre' invece di 'undicesima'. | p54 |
 | l'i a | l'intelligenza artificiale | La sequenza 'l'i a' viene fusa foneticamente e accentata come l'avverbio 'lì a'. | p52c |
+| pi di u | pi-di-ù | La sintesi vocale legge 'pi di un' anziché 'pi di u'. | p432 |
 | pi emme o. | pi-emme-o. | Pausa marcata prima di 'o' a chiusura di frase, con caduta d'intonazione sconnessa ('del pi emme... o'). | p58a |
 | quattrocento punto zero | 400.000 | Ha letto 'quattrocento punto zero dollari' anziché 'quattrocentomila dollari'. | p82 |
 | rmcls.com/game/process-chart-game-v12); | erre emme ci elle esse punto com slash game slash process chart game v dodici); | L'URL viene letto scorrettamente con 's' al posto degli slash e 'dodici' storpiato in 'dodigi'. | p44 |

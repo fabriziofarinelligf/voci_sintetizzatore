@@ -215,6 +215,14 @@
    "fonte": "p54-lavoro verifica-1",
    "pagina": "p54",
    "parola": "scope"
+  },
+  {
+   "da": "pi di u",
+   "a": "pi-di-ù",
+   "motivo": "La sintesi vocale legge 'pi di un' anziché 'pi di u'.",
+   "fonte": "p432-lavoro verifica-1",
+   "pagina": "p432",
+   "parola": "pi di u"
   }
  ],
  "inglese_tra_virgolette": false

@@ -84,6 +84,21 @@ def test_giro():
     r = js(f"{d}/regole.json")
     assert r["inglese_tra_virgolette"] and [(s["da"], s["a"]) for s in r["sostituzioni"]] == [("project", "progect")] and js(f"{d}/regole-proposte.json") == []
 
+    # conferma-pronunce: approva la buona, salta contrasto, voci sbagliate e senza prova; l'inglese resta a mano
+    C = lambda da, a, **k: {"tipo": "sostituzione", "da": da, "a": a, "motivo": f"Gemini: {da}", "pagina": "p41", "esempio": "e", "fonte": "p41 verifica-1", "risolto": True, **k}
+    js(f"{d}/regole-proposte.json", [C("issue", "isciu"), C("project", "progetto"), C("uno due tre quattro cinque", "x"), C("stesso", "stesso"),
+        C("vuota", " "), C("senza", "prova", risolto=None), C("finta", "prova", risolto="true"), C("issue log", "isciu log"),
+        {"tipo": "inglese", "motivo": "c", "pagina": "p41", "esempio": "e", "fonte": "t", "risolto": True}])
+    out = run("regole.py", "conferma-pronunce")
+    assert "approvata: «issue» → «isciu»" in out and "approvata: «issue log» → «isciu log»" in out, out
+    assert "saltata: «project» → «progetto» (contrasta con una regola esistente)" in out and out.count("saltata:") == 6, out
+    r = js(f"{d}/regole.json"); assert [(s["da"], s["a"]) for s in r["sostituzioni"]] == [("project", "progect"), ("issue", "isciu"), ("issue log", "isciu log")]
+    assert r["sostituzioni"][1]["pagina"] == "p41" and r["sostituzioni"][1]["motivo"] == "Gemini: issue"
+    assert [c.get("da") for c in js(f"{d}/regole-proposte.json")] == ["project", "uno due tre quattro cinque", "stesso", "vuota", "senza", "finta", None]
+    out = run("-c", "import regole as R; print(R.applica('usa gli issue log e le issue', R.regole()))")
+    assert out.strip() == "usa gli isciu log e le isciu", out
+    js(f"{d}/regole-proposte.json", [C("issue", "isciu")]); assert "già in uso" in run("regole.py", "conferma-pronunce") and js(f"{d}/regole-proposte.json") == []
+
     # le regole approvate valgono nella sintesi successiva
     L2 = os.path.join(d, "pag2"); run("sintetizza.py", "--normalizza", os.path.join(d, "p40.json"), L2)
     ff = js(f"{L2}/manifest.json")["frasi"]

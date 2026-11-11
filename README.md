@@ -45,7 +45,7 @@ Gemini ascolta la pagina e segnala solo le frasi che non vanno (numero della fra
 Al massimo due giri di correzione per pagina (`correggi.py` rifiuta il terzo); il secondo riparte dal passo 3 e scrive `revisione-2.json`.
 Azioni: `rigenera` (stesso testo, seme + 1), `riscrivi` (testo letto nuovo), `inglese` (frase letta in inglese), `pausa` (secondi dopo la frase, 0,2-1,5), `errore_testo` (refuso del manuale: annotato in `errori-testo.md` e riletto col testo corretto, dopo `--normalizza` e regole).
 
-`regole.json` raccoglie quello che il giro ha imparato e vale in ogni sintesi nuova, dopo `--normalizza`: `sostituzioni` (parola o gruppo di parole intero `da` → `a`) e `inglese_tra_virgolette` (una frase che è tutta una citazione tra virgolette dritte o “ ” si legge in inglese, senza normalizza). Le candidate stanno in `regole-proposte.json`: `python regole.py lista`, poi `approva N` o `scarta N`; nessuna si approva da sola.
+`regole.json` raccoglie quello che il giro ha imparato e vale in ogni sintesi nuova, dopo `--normalizza`: `sostituzioni` (parola o gruppo di parole intero `da` → `a`) e `inglese_tra_virgolette` (una frase che è tutta una citazione tra virgolette dritte o “ ” si legge in inglese, senza normalizza). Le candidate stanno in `regole-proposte.json`: `python regole.py lista`, poi `approva N` o `scarta N`. `python regole.py conferma-pronunce` approva da sola ogni sostituzione con la prova della verifica (`risolto` true), con `da` di 1-4 parole, `a` non vuoto e diverso, senza contrasto con una regola esistente; le altre restano candidate e vengono elencate.
 
 Prova senza modello e senza Gemini: `VOCI_FAKE_TTS=1` (tono al posto della voce) e `revisione.py --risposta-finta R.json`; il giro intero è in `python tests/test_giro.py`.
 

@@ -2,7 +2,7 @@
 Uso: python revisione.py [--risposta-finta R.json] LAVORO             -> LAVORO/revisione-N.json (N = giro)
      python revisione.py --verifica [--risposta-finta R.json] LAVORO  -> ascolta solo le frasi cambiate dall'ultima correzione, LAVORO/verifica-N.json
 Chiave in GEMINI_API_KEY (mai stampata). Modelli in ordine: gemini-3.8-flash, gemini-3.5-flash, gemini-2.5-flash; 503 -> riprova dopo 30 e 90 s, poi modello
-successivo; 429 -> si ferma. Dopo --verifica le correzioni riscrivi/inglese risolte diventano candidate in regole-proposte.json (regole.py lista)."""
+successivo; 429 (quota) -> subito il modello successivo. Dopo --verifica le correzioni riscrivi/inglese risolte diventano candidate in regole-proposte.json (regole.py lista)."""
 import argparse, difflib, glob, json, os, subprocess, sys, tempfile, time, numpy as np, soundfile as sf
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import regole as R
@@ -62,10 +62,10 @@ def chiedi(audio_mp3, prompt, schema):
                 r = client.models.generate_content(model=modello, contents=parti, config=cfg)
                 return modello, json.loads(r.text)
             except errors.APIError as e:
-                if e.code == 429: sys.exit(f"{modello}: quota esaurita (429), riprova più tardi")
+                if e.code == 429: print(f"{modello}: quota esaurita (429), provo il modello successivo", flush=True); break  # quote separate per modello
                 print(f"{modello}: errore {e.code} {e.status}: {e.message}", flush=True)
                 if e.code != 503: break  # modello inesistente o altro: si passa al successivo
-    sys.exit("nessun modello Gemini ha risposto")
+    sys.exit("nessun modello Gemini ha risposto (quota esaurita o errore su tutti)")
 
 def risposta(finta, mp3_, prompt, schema):
     return ("finta", json.load(open(finta))) if finta else chiedi(mp3_, prompt, schema)

@@ -73,6 +73,7 @@ def test_giro():
     v = js(f"{L}/verifica-1.json"); assert v["frasi"] == [1, 2, 3, 5] and len(v["esiti"]) == 3
     prop = js(f"{d}/regole-proposte.json")
     assert [(c["tipo"], c["da"], c["a"]) for c in prop] == [("sostituzione", "project", "progect")] and prop[0]["pagina"] == "p40"
+    assert prop[0]["risolto"] is True and prop[0]["frase_id"] == 3 and prop[0]["motivo"] == "p3riscrivi" and prop[0]["fonte"] == "pag verifica-1"
     assert not os.path.exists(f"{d}/regole.json")  # niente approvazione automatica
 
     # candidata inglese a mano (come da una verifica risolta), poi lista / approva / scarta

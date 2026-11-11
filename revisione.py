@@ -106,17 +106,19 @@ def verifica(lavoro, finta=None):
     esiti = [e for e in r["esiti"] if e.get("frase_id") in cambiate]
     out = os.path.join(lavoro, f"verifica-{n}.json")
     json.dump({"modello": modello, "frasi": cambiate, "esiti": esiti}, open(out, "w"), ensure_ascii=False, indent=1)
-    risolte = {e["frase_id"] for e in esiti if e["risolto"]}
+    risolte = {e["frase_id"]: e for e in esiti if e["risolto"] is True}
     print(f"{out}: {len(risolte)}/{len(cambiate)} risolte")
     proponi(m, mod, risolte, f"{os.path.basename(os.path.normpath(lavoro))} verifica-{n}")
     return out
 
 def proponi(m, mod, risolte, fonte):
-    """Le correzioni riscrivi/inglese risolte diventano regole candidate; le approva una persona o l'agente con regole.py."""
+    """Le correzioni riscrivi/inglese risolte diventano regole candidate; le approva una persona o l'agente con regole.py.
+    risolte = {frase_id: esito della verifica con risolto true}: la candidata ne porta la prova (risolto, nota_verifica)."""
     proposte, per_id, nuove = R.leggi("regole-proposte.json", []), {f["id"]: f for f in m["frasi"]}, 0
     for x in mod:
         if x["frase_id"] not in risolte or x["azione"] not in ("riscrivi", "inglese"): continue
-        c = {"tipo": "inglese", "motivo": x["problema"], "pagina": m["pagina"], "esempio": per_id[x["frase_id"]]["testo_originale"], "fonte": fonte}
+        c = {"tipo": "inglese", "motivo": x["problema"], "parola": x.get("parola", ""), "pagina": m["pagina"], "frase_id": x["frase_id"],
+             "esempio": per_id[x["frase_id"]]["testo_originale"], "fonte": fonte, "risolto": True, "nota_verifica": risolte[x["frase_id"]].get("nota", "")}
         if x["azione"] == "riscrivi":  # solo il tratto di parole che cambia, così la regola vale anche in altre frasi
             p, d = x["prima"].split(), x["dopo"].split()
             ops = [o for o in difflib.SequenceMatcher(a=p, b=d, autojunk=False).get_opcodes() if o[0] != "equal"]

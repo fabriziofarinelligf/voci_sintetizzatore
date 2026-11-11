@@ -99,6 +99,14 @@ def test_giro():
     assert out.strip() == "usa gli isciu log e le isciu", out
     js(f"{d}/regole-proposte.json", [C("issue", "isciu")]); assert "già in uso" in run("regole.py", "conferma-pronunce") and js(f"{d}/regole-proposte.json") == []
 
+    # vocabolario: tabella in ordine alfabetico; rimuovi toglie la regola e riscrive il vocabolario
+    V = f"{d}/VOCABOLARIO-PRONUNCE.md"
+    assert "3 parole" in run("regole.py", "vocabolario")
+    v = open(V).read(); assert "python regole.py rimuovi PAROLA" in v and "| Parola | Scritta per la voce | Perché | Prima pagina |" in v
+    assert v.index("| issue | isciu | Gemini: issue | p41 |") < v.index("| issue log |") < v.index("| project | progect | p3riscrivi | p40 |"), v
+    run("regole.py", "rimuovi", "issue", "log"); run("regole.py", "rimuovi", "nessuna", ok=False)
+    assert [s["da"] for s in js(f"{d}/regole.json")["sostituzioni"]] == ["project", "issue"] and "issue log" not in open(V).read()
+
     # le regole approvate valgono nella sintesi successiva
     L2 = os.path.join(d, "pag2"); run("sintetizza.py", "--normalizza", os.path.join(d, "p40.json"), L2)
     ff = js(f"{L2}/manifest.json")["frasi"]

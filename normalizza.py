@@ -18,6 +18,7 @@ def _sigla(m):
 
 def normalizza(testo):
     testo = re.sub(r"\b([A-Z])&([A-Z])\b", lambda m: f"{LETTERE[m.group(1)]} e {LETTERE[m.group(2)]}", testo)  # M&C
+    testo = re.sub(r"\b([A-Z])(\d+)(?:\.(\d+))?\b", lambda m: LETTERE[m.group(1)] + " " + _numero(re.match(r"(\d+)(?:\.(\d+))?", m.group(0)[1:])), testo)  # X3.3, T6
     testo = re.sub(r"\b(\d+)(?:[.,](\d+))?\b", _numero, testo)
     testo = re.sub(r"\b[A-Z]{2,5}\b", _sigla, testo)  # PMP, ECO; parole intere in maiuscolo di 2-5 lettere
     return testo

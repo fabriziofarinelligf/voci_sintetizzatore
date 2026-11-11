@@ -8,4 +8,7 @@ la frase viene riletta e Gemini, riascoltandola, conferma che il problema è ris
 Per toglierne una: `python regole.py rimuovi PAROLA` (riscrive anche questa pagina).
 Questo file si rigenera con `python regole.py vocabolario`: non modificarlo a mano.
 
-Ancora nessuna parola.
+| Parola | Scritta per la voce | Perché | Prima pagina |
+|---|---|---|---|
+| deliverable | delìverabl | Pronuncia errata con accento tronco sulla sillaba finale ('deliverabèl') | p42 |
+| issue | isciu | Pronuncia errata del termine inglese ('isciò' invece di 'ìsciu') | p42 |

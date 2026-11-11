@@ -1,4 +1,21 @@
 {
- "sostituzioni": [],
+ "sostituzioni": [
+  {
+   "da": "deliverable",
+   "a": "delìverabl",
+   "motivo": "Pronuncia errata con accento tronco sulla sillaba finale ('deliverabèl')",
+   "fonte": "p42-lavoro verifica-1",
+   "pagina": "p42",
+   "parola": ""
+  },
+  {
+   "da": "issue",
+   "a": "isciu",
+   "motivo": "Pronuncia errata del termine inglese ('isciò' invece di 'ìsciu')",
+   "fonte": "p42-lavoro verifica-1",
+   "pagina": "p42",
+   "parola": ""
+  }
+ ],
  "inglese_tra_virgolette": false
 }

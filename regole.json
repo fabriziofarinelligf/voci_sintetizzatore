@@ -33,14 +33,6 @@
    "parola": "o"
   },
   {
-   "da": "pi emme o (X2.quattro).",
-   "a": "pi-emme-o (X due punto quattro).",
-   "motivo": "Il codice 'X2' viene pronunciato 'iks du'.",
-   "fonte": "p58a-lavoro verifica-1",
-   "pagina": "p58a",
-   "parola": "X2.quattro"
-  },
-  {
    "da": "12ª ed.,",
    "a": "dodicesima edizione,",
    "motivo": "L'abbreviazione viene letta in modo scorretto come 'dodici e ed'.",
@@ -51,14 +43,6 @@
   {
    "da": "X3.tre",
    "a": "Ics tre punto tre",
-   "motivo": "La lettera X viene pronunciata erroneamente 'icsi'.",
-   "fonte": "p52c-lavoro verifica-1",
-   "pagina": "p52c",
-   "parola": "X3.tre"
-  },
-  {
-   "da": "(X3.tre).",
-   "a": "(Ics tre punto tre).",
    "motivo": "La lettera X viene pronunciata erroneamente 'icsi'.",
    "fonte": "p52c-lavoro verifica-1",
    "pagina": "p52c",

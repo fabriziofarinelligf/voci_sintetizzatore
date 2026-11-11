@@ -15,6 +15,70 @@
    "fonte": "p42-lavoro verifica-1",
    "pagina": "p42",
    "parola": ""
+  },
+  {
+   "da": "X2",
+   "a": "X due",
+   "motivo": "Pronunciato in modo tronco e anomalo come 'iks du'.",
+   "fonte": "p58a-lavoro verifica-1",
+   "pagina": "p58a",
+   "parola": "X2"
+  },
+  {
+   "da": "pi emme o.",
+   "a": "pi-emme-o.",
+   "motivo": "Pausa marcata prima di 'o' a chiusura di frase, con caduta d'intonazione sconnessa ('del pi emme... o').",
+   "fonte": "p58a-lavoro verifica-1",
+   "pagina": "p58a",
+   "parola": "o"
+  },
+  {
+   "da": "pi emme o (X2.quattro).",
+   "a": "pi-emme-o (X due punto quattro).",
+   "motivo": "Il codice 'X2' viene pronunciato 'iks du'.",
+   "fonte": "p58a-lavoro verifica-1",
+   "pagina": "p58a",
+   "parola": "X2.quattro"
+  },
+  {
+   "da": "12ª ed.,",
+   "a": "dodicesima edizione,",
+   "motivo": "L'abbreviazione viene letta in modo scorretto come 'dodici e ed'.",
+   "fonte": "p52c-lavoro verifica-1",
+   "pagina": "p52c",
+   "parola": "12ª ed."
+  },
+  {
+   "da": "X3.tre",
+   "a": "Ics tre punto tre",
+   "motivo": "La lettera X viene pronunciata erroneamente 'icsi'.",
+   "fonte": "p52c-lavoro verifica-1",
+   "pagina": "p52c",
+   "parola": "X3.tre"
+  },
+  {
+   "da": "(X3.tre).",
+   "a": "(Ics tre punto tre).",
+   "motivo": "La lettera X viene pronunciata erroneamente 'icsi'.",
+   "fonte": "p52c-lavoro verifica-1",
+   "pagina": "p52c",
+   "parola": "X3.tre"
+  },
+  {
+   "da": "l'i a",
+   "a": "l'intelligenza artificiale",
+   "motivo": "La sequenza 'l'i a' viene fusa foneticamente e accentata come l'avverbio 'lì a'.",
+   "fonte": "p52c-lavoro verifica-1",
+   "pagina": "p52c",
+   "parola": "l'i a"
+  },
+  {
+   "da": "T6",
+   "a": "T sei",
+   "motivo": "Il numero 6 viene letto come 'seis' anziché 'sei' o 'six'",
+   "fonte": "p59-lavoro verifica-1",
+   "pagina": "p59",
+   "parola": "T6"
   }
  ],
  "inglese_tra_virgolette": false

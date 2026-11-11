@@ -1,13 +1,14 @@
 """Fase 3 del giro: Gemini ascolta la pagina montata e segnala solo i problemi sentiti, frase per frase.
 Uso: python revisione.py [--risposta-finta R.json] LAVORO             -> LAVORO/revisione-N.json (N = giro)
      python revisione.py --verifica [--risposta-finta R.json] LAVORO  -> ascolta solo le frasi cambiate dall'ultima correzione, LAVORO/verifica-N.json
-Chiave in GEMINI_API_KEY (mai stampata). Modelli in ordine: gemini-3.8-flash, gemini-3.5-flash, gemini-2.5-flash; 503 -> riprova dopo 30 e 90 s, poi modello
+Chiave in GEMINI_API_KEY (mai stampata). Modelli in ordine: gemini-3.8-flash, gemini-3.5-flash (env GEMINI_MODELLI per cambiarli); 503 -> riprova dopo 30 e 90 s, poi modello
 successivo; 429 (quota) -> subito il modello successivo. Dopo --verifica le correzioni riscrivi/inglese risolte diventano candidate in regole-proposte.json (regole.py lista)."""
 import argparse, difflib, glob, json, os, subprocess, sys, tempfile, time, numpy as np, soundfile as sf
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import regole as R
 
-MODELLI, ATTESE = ["gemini-3.8-flash", "gemini-3.5-flash", "gemini-2.5-flash"], [0, 30, 90]
+MODELLI = os.environ.get("GEMINI_MODELLI", "gemini-3.8-flash,gemini-3.5-flash").split(",")  # 2.5 tolto finché la prova non lo promuove
+ATTESE = [0, 30, 90]
 AZIONI = ["rigenera", "riscrivi", "inglese", "pausa", "errore_testo"]
 N_, S_, I_, B_ = ({"type": t} for t in ("NUMBER", "STRING", "INTEGER", "BOOLEAN"))
 SCHEMA = {"type": "OBJECT", "required": ["voti", "problemi"], "properties": {

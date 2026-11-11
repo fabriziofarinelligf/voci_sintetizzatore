@@ -63,6 +63,158 @@
    "fonte": "p59-lavoro verifica-1",
    "pagina": "p59",
    "parola": "T6"
+  },
+  {
+   "da": "Key",
+   "a": "Kii",
+   "motivo": "La parola inglese 'Key' viene letta come 'Chi' anziché con la corretta pronuncia inglese.",
+   "fonte": "p52-lavoro verifica-1",
+   "pagina": "p52",
+   "parola": "Key"
+  },
+  {
+   "da": "diviso undici diviso",
+   "a": "novembre",
+   "motivo": "La data espressa con gli slash 17/11/2025 viene letta letteralmente come 'diciassette diviso undici diviso duemilaventicinque'.",
+   "fonte": "p52b-lavoro verifica-1",
+   "pagina": "p52b",
+   "parola": "diviso"
+  },
+  {
+   "da": "dieci punto zero",
+   "a": "10.000",
+   "motivo": "Ha letto 'dieci punto zero dollari' anziché 'diecimila dollari'.",
+   "fonte": "p82-lavoro verifica-1",
+   "pagina": "p82",
+   "parola": "punto"
+  },
+  {
+   "da": "quattrocento punto zero",
+   "a": "400.000",
+   "motivo": "Ha letto 'quattrocento punto zero dollari' anziché 'quattrocentomila dollari'.",
+   "fonte": "p82-lavoro verifica-1",
+   "pagina": "p82",
+   "parola": "punto"
+  },
+  {
+   "da": "T6).",
+   "a": "Ti sei).",
+   "motivo": "Pronuncia errata della sigla 'T6', letta nuovamente 'ti seis'.",
+   "fonte": "p60-lavoro verifica-1",
+   "pagina": "p60",
+   "parola": "T6"
+  },
+  {
+   "da": "(nella Pimbok otto:",
+   "a": "(nel PMBOK 8:",
+   "motivo": "La frase si interrompe bruscamente sui due punti prima della parentesi, lasciando l'intonazione sospesa e creando una pausa spezzata rispetto alla frase successiva.",
+   "fonte": "p43-lavoro verifica-1",
+   "pagina": "p43",
+   "parola": "otto:"
+  },
+  {
+   "da": "rmcls.com/game/process-chart-game-v12);",
+   "a": "erre emme ci elle esse punto com slash game slash process chart game v dodici);",
+   "motivo": "L'URL viene letto scorrettamente con 's' al posto degli slash e 'dodici' storpiato in 'dodigi'.",
+   "fonte": "p44-lavoro verifica-1",
+   "pagina": "p44",
+   "parola": "rmcls.com/game/process-chart-game-v12);"
+  },
+  {
+   "da": "\"done\"",
+   "a": "\"dan\"",
+   "motivo": "La parola inglese 'done' viene letta all'italiana ('dóne') anziché con la corretta pronuncia inglese.",
+   "fonte": "p45-lavoro verifica-1",
+   "pagina": "p45",
+   "parola": "done"
+  },
+  {
+   "da": "user",
+   "a": "iuser",
+   "motivo": "La parola 'user' viene letta con la 'u' all'italiana ('ùser') invece della pronuncia corretta 'iùser', diversamente da come fatto nelle altre frasi.",
+   "fonte": "p45-lavoro verifica-1",
+   "pagina": "p45",
+   "parola": "user"
+  },
+  {
+   "da": "12ª",
+   "a": "dodicesima",
+   "motivo": "L'abbreviazione ordinale '12ª' viene espansa in modo anomalo e incomprensibile ('dodi fin due' anziché 'dodicesima').",
+   "fonte": "p45-lavoro verifica-1",
+   "pagina": "p45",
+   "parola": "12ª"
+  },
+  {
+   "da": "20XX.",
+   "a": "duemilaicsics.",
+   "motivo": "La sigla segnaposto viene pronunciata in modo confuso e scorretto come 'venti la prix six'.",
+   "fonte": "p83-lavoro verifica-1",
+   "pagina": "p83",
+   "parola": "20XX"
+  },
+  {
+   "da": "agile,",
+   "a": "agile.",
+   "motivo": "La virgola fonde il titolo della rubrica con la frase successiva, creando una pausa innaturale tra 'ambienti' e 'agile'.",
+   "fonte": "p87-lavoro verifica-1",
+   "pagina": "p87",
+   "parola": "Focus agile,"
+  },
+  {
+   "da": "T1.",
+   "a": "T uno.",
+   "motivo": "Letto come 'Te un' anziché 'T uno'",
+   "fonte": "p102a-lavoro verifica-1",
+   "pagina": "p102a",
+   "parola": "T1"
+  },
+  {
+   "da": "(6ª",
+   "a": "(sesta",
+   "motivo": "Il simbolo ordinale viene letto in modo errato come 'sei scor a edizione'",
+   "fonte": "p102a-lavoro verifica-1",
+   "pagina": "p102a",
+   "parola": "6ª edizione"
+  },
+  {
+   "da": "Executing",
+   "a": "Exekyuting",
+   "motivo": "Pronuncia inglese gravemente storpiata, pronunciata come 'exkitig'.",
+   "fonte": "p91-lavoro verifica-1",
+   "pagina": "p91",
+   "parola": "Executing"
+  },
+  {
+   "da": "(8ª",
+   "a": "(ottava",
+   "motivo": "Il numero ordinale '8ª' viene letto erroneamente come 'ottona' invece di 'ottava'.",
+   "fonte": "p91-lavoro verifica-1",
+   "pagina": "p91",
+   "parola": "8ª"
+  },
+  {
+   "da": "l'11ª",
+   "a": "l'undicesima",
+   "motivo": "Allucinazione nella lettura del testo: legge 'Blondeta' anziché 'l'undicesima'.",
+   "fonte": "p91-lavoro verifica-1",
+   "pagina": "p91",
+   "parola": "l'11ª"
+  },
+  {
+   "da": "L'11ª",
+   "a": "l'undicesima",
+   "motivo": "Letto erroneamente come 'undipre' invece di 'undicesima'.",
+   "fonte": "p54-lavoro verifica-1",
+   "pagina": "p54",
+   "parola": "L'11ª"
+  },
+  {
+   "da": "scope.",
+   "a": "scoup.",
+   "motivo": "Termine inglese pronunciato all'italiana ('scop') anziché con dittongo corretto ('scoup').",
+   "fonte": "p54-lavoro verifica-1",
+   "pagina": "p54",
+   "parola": "scope"
   }
  ],
  "inglese_tra_virgolette": false

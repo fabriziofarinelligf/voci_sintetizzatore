@@ -53,7 +53,7 @@ def chiedi(audio_mp3, prompt, schema):
     from google.genai import types, errors
     if not os.environ.get("GEMINI_API_KEY"): sys.exit("manca GEMINI_API_KEY nell'ambiente")
     # google-genai 3.x usa l'API v1, che rifiuta response_schema ("JSON mode is not enabled for api version v1"): serve v1beta
-    client = genai.Client(api_key=os.environ["GEMINI_API_KEY"], http_options=types.HttpOptions(api_version="v1beta"))
+    client = genai.Client(api_key=os.environ["GEMINI_API_KEY"], http_options=types.HttpOptions(api_version="v1beta", timeout=600_000))
     parti = [types.Part.from_bytes(data=open(audio_mp3, "rb").read(), mime_type="audio/mp3"), prompt]
     cfg = types.GenerateContentConfig(response_mime_type="application/json", response_schema=schema)
     for modello in MODELLI:

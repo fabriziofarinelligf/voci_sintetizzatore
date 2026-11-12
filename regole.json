@@ -223,6 +223,46 @@
    "fonte": "p432-lavoro verifica-1",
    "pagina": "p432",
    "parola": "pi di u"
+  },
+  {
+   "da": "High-Level,",
+   "a": "High-Level",
+   "motivo": "La virgola separa il modificatore dal sostantivo creando una pausa anomala nel titolo.",
+   "fonte": "p179-lavoro verifica-1",
+   "pagina": "p179",
+   "parola": "High-Level,"
+  },
+  {
+   "da": "Medium,",
+   "a": "Medium",
+   "motivo": "La virgola spezza il binomio Medium Feature con una pausa innaturale.",
+   "fonte": "p179-lavoro verifica-1",
+   "pagina": "p179",
+   "parola": "Medium,"
+  },
+  {
+   "da": "Small, Story (iuser",
+   "a": "Small Story (user",
+   "motivo": "La virgola interrompe la continuità del titolo Small Story.",
+   "fonte": "p179-lavoro verifica-1",
+   "pagina": "p179",
+   "parola": "Small,"
+  },
+  {
+   "da": "l'a ti di di",
+   "a": "l'ATDD",
+   "motivo": "L'acronimo ATDD viene scandito lettera per lettera in modo innaturale.",
+   "fonte": "p181-lavoro verifica-1",
+   "pagina": "p181",
+   "parola": "a ti di di"
+  },
+  {
+   "da": "pi emme i",
+   "a": "PMI",
+   "motivo": "L'acronimo PMI viene letto scandendo 'pi emme i' in maniera staccata.",
+   "fonte": "p181-lavoro verifica-1",
+   "pagina": "p181",
+   "parola": "pi emme i"
   }
  ],
  "inglese_tra_virgolette": false

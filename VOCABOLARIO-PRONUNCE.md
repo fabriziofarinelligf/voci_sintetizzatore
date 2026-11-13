@@ -21,6 +21,7 @@ Questo file si rigenera con `python regole.py vocabolario`: non modificarlo a ma
 | deliverable | delìverabl | Pronuncia errata con accento tronco sulla sillaba finale ('deliverabèl') | p42 |
 | dieci punto zero | 10.000 | Ha letto 'dieci punto zero dollari' anziché 'diecimila dollari'. | p82 |
 | diviso undici diviso | novembre | La data espressa con gli slash 17/11/2025 viene letta letteralmente come 'diciassette diviso undici diviso duemilaventicinque'. | p52b |
+| elaboration | ilèboreiscion | Pronuncia errata del termine inglese elaboration, accentato all'italiana/francese sulla sillaba finale. | p179 |
 | Executing | Exekyuting | Pronuncia inglese gravemente storpiata, pronunciata come 'exkitig'. | p91 |
 | High-Level, | High-Level | La virgola separa il modificatore dal sostantivo creando una pausa anomala nel titolo. | p179 |
 | issue | isciu | Pronuncia errata del termine inglese ('isciò' invece di 'ìsciu') | p42 |

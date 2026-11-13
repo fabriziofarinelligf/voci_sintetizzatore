@@ -24,6 +24,7 @@ Questo file si rigenera con `python regole.py vocabolario`: non modificarlo a ma
 | elaboration | ilèboreiscion | Pronuncia errata del termine inglese elaboration, accentato all'italiana/francese sulla sillaba finale. | p179 |
 | Executing | Exekyuting | Pronuncia inglese gravemente storpiata, pronunciata come 'exkitig'. | p91 |
 | High-Level, | High-Level | La virgola separa il modificatore dal sostantivo creando una pausa anomala nel titolo. | p179 |
+| i i; | Due; | Il numero romano II viene letto lettera per lettera 'i i' anziché come numerale ordinale/cardinale 'due' o 'two'. | p105 |
 | issue | isciu | Pronuncia errata del termine inglese ('isciò' invece di 'ìsciu') | p42 |
 | Key | Kii | La parola inglese 'Key' viene letta come 'Chi' anziché con la corretta pronuncia inglese. | p52 |
 | l'11ª | l'undicesima | Allucinazione nella lettura del testo: legge 'Blondeta' anziché 'l'undicesima'. | p91 |
@@ -34,6 +35,8 @@ Questo file si rigenera con `python regole.py vocabolario`: non modificarlo a ma
 | pi di u | pi-di-ù | La sintesi vocale legge 'pi di un' anziché 'pi di u'. | p432 |
 | pi emme i | PMI | L'acronimo PMI viene letto scandendo 'pi emme i' in maniera staccata. | p181 |
 | pi emme o. | pi-emme-o. | Pausa marcata prima di 'o' a chiusura di frase, con caduta d'intonazione sconnessa ('del pi emme... o'). | p58a |
+| Practices | Praktis | La parola inglese viene pronunciata in modo errato come 'practi-es'. | p105 |
+| Principles | Prinsipls | Pronuncia errata del termine inglese, reso come 'principlis'. | p105 |
 | quattrocento punto zero | 400.000 | Ha letto 'quattrocento punto zero dollari' anziché 'quattrocentomila dollari'. | p82 |
 | rmcls.com/game/process-chart-game-v12); | erre emme ci elle esse punto com slash game slash process chart game v dodici); | L'URL viene letto scorrettamente con 's' al posto degli slash e 'dodici' storpiato in 'dodigi'. | p44 |
 | scope. | scoup. | Termine inglese pronunciato all'italiana ('scop') anziché con dittongo corretto ('scoup'). | p54 |

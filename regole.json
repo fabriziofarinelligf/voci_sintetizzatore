@@ -271,6 +271,30 @@
    "fonte": "p179-lavoro verifica-1",
    "pagina": "p179",
    "parola": "elaboration"
+  },
+  {
+   "da": "i i;",
+   "a": "Due;",
+   "motivo": "Il numero romano II viene letto lettera per lettera 'i i' anziché come numerale ordinale/cardinale 'due' o 'two'.",
+   "fonte": "p105-lavoro verifica-1",
+   "pagina": "p105",
+   "parola": "i i"
+  },
+  {
+   "da": "Practices",
+   "a": "Praktis",
+   "motivo": "La parola inglese viene pronunciata in modo errato come 'practi-es'.",
+   "fonte": "p105-lavoro verifica-1",
+   "pagina": "p105",
+   "parola": "Practices"
+  },
+  {
+   "da": "Principles",
+   "a": "Prinsipls",
+   "motivo": "Pronuncia errata del termine inglese, reso come 'principlis'.",
+   "fonte": "p105-lavoro verifica-1",
+   "pagina": "p105",
+   "parola": "Principles"
   }
  ],
  "inglese_tra_virgolette": false

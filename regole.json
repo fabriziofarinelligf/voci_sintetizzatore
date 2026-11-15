@@ -295,6 +295,86 @@
    "fonte": "p105-lavoro verifica-1",
    "pagina": "p105",
    "parola": "Principles"
+  },
+  {
+   "da": "rmcls.com/agile-process-chart-game-v11.",
+   "a": "r m c l s punto com barra agile process chart game v undici.",
+   "motivo": "La lettura dell'URL risulta poco fluida e la dizione dell'inglese è troppo italianizzata.",
+   "fonte": "p48-lavoro verifica-1",
+   "pagina": "p48",
+   "parola": "rmcls.com/agile-process-chart-game-v11"
+  },
+  {
+   "da": "l'i a:",
+   "a": "l'IA:",
+   "motivo": "L'acronimo IA viene letto staccato come 'i a' invece di essere pronunciato in modo naturale.",
+   "fonte": "p52b-lavoro verifica-1",
+   "pagina": "p52b",
+   "parola": "l'i a"
+  },
+  {
+   "da": "(X3.tre).",
+   "a": "(Ics tre punto tre).",
+   "motivo": "La lettera X viene pronunciata erroneamente 'icsi'.",
+   "fonte": "p52c-lavoro verifica-1",
+   "pagina": "p52c",
+   "parola": "X3.tre"
+  },
+  {
+   "da": "Nell'11ª",
+   "a": "Nell'undicesima",
+   "motivo": "Il numero ordinale '11ª' viene letto erroneamente come 'unditro' anziché 'undicesima'.",
+   "fonte": "p56-lavoro verifica-1",
+   "pagina": "p56",
+   "parola": "11ª"
+  },
+  {
+   "da": "T2",
+   "a": "T due",
+   "motivo": "La sigla 'T2' viene pronunciata in modo bizzarro come 'ti dui' anziché 'ti due'.",
+   "fonte": "p56-lavoro verifica-1",
+   "pagina": "p56",
+   "parola": "T2"
+  },
+  {
+   "da": "simple",
+   "a": "sìmpol",
+   "motivo": "La parola inglese 'simple' viene letta all'italiana ('sìmple') anziché con fonetica inglese.",
+   "fonte": "p56-lavoro verifica-1",
+   "pagina": "p56",
+   "parola": "simple"
+  },
+  {
+   "da": "Guide (8ª",
+   "a": "Gaid (ottava",
+   "motivo": "Pronuncia errata del termine inglese Guide come 'ghid' invece di 'gaid'.",
+   "fonte": "p84-lavoro verifica-1",
+   "pagina": "p84",
+   "parola": "Guide"
+  },
+  {
+   "da": "intermedi)",
+   "a": "intermèdi)",
+   "motivo": "Accento errato sulla vocale, pronunciato come 'intermedì-i' anziché 'intermèdi'",
+   "fonte": "p86-lavoro verifica-1",
+   "pagina": "p86",
+   "parola": "intermedi"
+  },
+  {
+   "da": "spostano",
+   "a": "spòstano",
+   "motivo": "Accento errato sulla penultima sillaba: pronunciato 'spostàno' anziché 'spòstano'.",
+   "fonte": "p87-lavoro verifica-1",
+   "pagina": "p87",
+   "parola": "spostano"
+  },
+  {
+   "da": "Issue",
+   "a": "Issiu",
+   "motivo": "Pronuncia errata del termine inglese, pronunciato 'isio' anziché 'ish-ue'/'issiu'",
+   "fonte": "p89-lavoro verifica-1",
+   "pagina": "p89",
+   "parola": "Issue"
   }
  ],
  "inglese_tra_virgolette": false

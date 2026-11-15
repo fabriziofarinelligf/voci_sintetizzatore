@@ -30,6 +30,10 @@ Questo file si rigenera con `python regole.py vocabolario`: non modificarlo a ma
 | Executing | Exekyuting | Pronuncia inglese gravemente storpiata, pronunciata come 'exkitig'. | p91 |
 | Guide (8ª | Gaid (ottava | Pronuncia errata del termine inglese Guide come 'ghid' invece di 'gaid'. | p84 |
 | High-Level, | High-Level | La virgola separa il modificatore dal sostantivo creando una pausa anomala nel titolo. | p179 |
+| i Due; | due; | Lettura anomala 'i Due' per indicare il numero romano II | p380 |
+| i i i | terzo | Il numero romano III viene letto lettera per lettera 'i i i' anziché 'terzo' | p380 |
+| i i i, | terzo, | I numeri romani III vengono letti come 'i i i' anziché 'tre' o 'terzo' | p382 |
+| i i"). | secondo"). | Il numero romano II viene letto come singole lettere 'i i' | p380 |
 | i i; | Due; | Il numero romano II viene letto lettera per lettera 'i i' anziché come numerale ordinale/cardinale 'due' o 'two'. | p105 |
 | intermedi) | intermèdi) | Accento errato sulla vocale, pronunciato come 'intermedì-i' anziché 'intermèdi' | p86 |
 | issue | isciu | Pronuncia errata del termine inglese ('isciò' invece di 'ìsciu') | p42 |
@@ -47,6 +51,7 @@ Questo file si rigenera con `python regole.py vocabolario`: non modificarlo a ma
 | pi di u | pi-di-ù | La sintesi vocale legge 'pi di un' anziché 'pi di u'. | p432 |
 | pi emme i | PMI | L'acronimo PMI viene letto scandendo 'pi emme i' in maniera staccata. | p181 |
 | pi emme o. | pi-emme-o. | Pausa marcata prima di 'o' a chiusura di frase, con caduta d'intonazione sconnessa ('del pi emme... o'). | p58a |
+| Pimbok | P.M.B.O.K. | Acronimo letto 'Pimbok' anziché scansito o pronunciato correttamente | p382 |
 | Practices | Praktis | La parola inglese viene pronunciata in modo errato come 'practi-es'. | p105 |
 | Principles | Prinsipls | Pronuncia errata del termine inglese, reso come 'principlis'. | p105 |
 | quattrocento punto zero | 400.000 | Ha letto 'quattrocento punto zero dollari' anziché 'quattrocentomila dollari'. | p82 |

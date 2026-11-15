@@ -423,6 +423,46 @@
    "fonte": "p386-lavoro verifica-1",
    "pagina": "p386",
    "parola": "Significa"
+  },
+  {
+   "da": "Pimbok",
+   "a": "P.M.B.O.K.",
+   "motivo": "Acronimo letto 'Pimbok' anziché scansito o pronunciato correttamente",
+   "fonte": "p382-lavoro verifica-1",
+   "pagina": "p382",
+   "parola": "Pimbok"
+  },
+  {
+   "da": "i i i,",
+   "a": "terzo,",
+   "motivo": "I numeri romani III vengono letti come 'i i i' anziché 'tre' o 'terzo'",
+   "fonte": "p382-lavoro verifica-1",
+   "pagina": "p382",
+   "parola": "i i i"
+  },
+  {
+   "da": "i i i",
+   "a": "terzo",
+   "motivo": "Il numero romano III viene letto lettera per lettera 'i i i' anziché 'terzo'",
+   "fonte": "p380-lavoro verifica-1",
+   "pagina": "p380",
+   "parola": "i i i"
+  },
+  {
+   "da": "i i\").",
+   "a": "secondo\").",
+   "motivo": "Il numero romano II viene letto come singole lettere 'i i'",
+   "fonte": "p380-lavoro verifica-1",
+   "pagina": "p380",
+   "parola": "i i"
+  },
+  {
+   "da": "i Due;",
+   "a": "due;",
+   "motivo": "Lettura anomala 'i Due' per indicare il numero romano II",
+   "fonte": "p380-lavoro verifica-1",
+   "pagina": "p380",
+   "parola": "i Due"
   }
  ],
  "inglese_tra_virgolette": false

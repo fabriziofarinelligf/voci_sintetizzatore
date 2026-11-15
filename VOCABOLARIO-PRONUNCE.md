@@ -20,8 +20,11 @@ Questo file si rigenera con `python regole.py vocabolario`: non modificarlo a ma
 | 20XX. | duemilaicsics. | La sigla segnaposto viene pronunciata in modo confuso e scorretto come 'venti la prix six'. | p83 |
 | agile, | agile. | La virgola fonde il titolo della rubrica con la frase successiva, creando una pausa innaturale tra 'ambienti' e 'agile'. | p87 |
 | deliverable | delìverabl | Pronuncia errata con accento tronco sulla sillaba finale ('deliverabèl') | p42 |
+| dell'e ci o | dell'ECO | L'acronimo ECO viene sillabato lettera per lettera invece di essere letto come parola unica 'eco'. | p379 |
+| delìverabl | deliverable | La parola inglese 'deliverables' è scritta in modo fonetico errato 'delìverabl' e risulta pronunciata male. | p387 |
 | dieci punto zero | 10.000 | Ha letto 'dieci punto zero dollari' anziché 'diecimila dollari'. | p82 |
 | diviso undici diviso | novembre | La data espressa con gli slash 17/11/2025 viene letta letteralmente come 'diciassette diviso undici diviso duemilaventicinque'. | p52b |
+| e ci o | ECO | L'acronimo ECO viene scandito come 'e ci o' anziché letto come 'eco'. | p379 |
 | elaboration | ilèboreiscion | Pronuncia errata del termine inglese elaboration, accentato all'italiana/francese sulla sillaba finale. | p179 |
 | Executing | Exekyuting | Pronuncia inglese gravemente storpiata, pronunciata come 'exkitig'. | p91 |
 | Guide (8ª | Gaid (ottava | Pronuncia errata del termine inglese Guide come 'ghid' invece di 'gaid'. | p84 |
@@ -38,6 +41,7 @@ Questo file si rigenera con `python regole.py vocabolario`: non modificarlo a ma
 | l'i a: | l'IA: | L'acronimo IA viene letto staccato come 'i a' invece di essere pronunciato in modo naturale. | p52b |
 | Medium, | Medium | La virgola spezza il binomio Medium Feature con una pausa innaturale. | p179 |
 | Nell'11ª | Nell'undicesima | Il numero ordinale '11ª' viene letto erroneamente come 'unditro' anziché 'undicesima'. | p56 |
+| Nell'e ci o | nell'ECO di | La sigla dell'ECO è trascritta come 'e ci o' e letta come singole lettere staccate in modo poco naturale. | p387 |
 | pi di u | pi-di-ù | La sintesi vocale legge 'pi di un' anziché 'pi di u'. | p432 |
 | pi emme i | PMI | L'acronimo PMI viene letto scandendo 'pi emme i' in maniera staccata. | p181 |
 | pi emme o. | pi-emme-o. | Pausa marcata prima di 'o' a chiusura di frase, con caduta d'intonazione sconnessa ('del pi emme... o'). | p58a |

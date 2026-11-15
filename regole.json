@@ -375,6 +375,38 @@
    "fonte": "p89-lavoro verifica-1",
    "pagina": "p89",
    "parola": "Issue"
+  },
+  {
+   "da": "dell'e ci o",
+   "a": "dell'ECO",
+   "motivo": "L'acronimo ECO viene sillabato lettera per lettera invece di essere letto come parola unica 'eco'.",
+   "fonte": "p379-lavoro verifica-1",
+   "pagina": "p379",
+   "parola": "e ci o"
+  },
+  {
+   "da": "e ci o",
+   "a": "ECO",
+   "motivo": "L'acronimo ECO viene scandito come 'e ci o' anziché letto come 'eco'.",
+   "fonte": "p379-lavoro verifica-1",
+   "pagina": "p379",
+   "parola": "e ci o"
+  },
+  {
+   "da": "delìverabl",
+   "a": "deliverable",
+   "motivo": "La parola inglese 'deliverables' è scritta in modo fonetico errato 'delìverabl' e risulta pronunciata male.",
+   "fonte": "p387-lavoro verifica-1",
+   "pagina": "p387",
+   "parola": "delìverabl"
+  },
+  {
+   "da": "Nell'e ci o",
+   "a": "nell'ECO di",
+   "motivo": "La sigla dell'ECO è trascritta come 'e ci o' e letta come singole lettere staccate in modo poco naturale.",
+   "fonte": "p387-lavoro verifica-1",
+   "pagina": "p387",
+   "parola": "e ci o"
   }
  ],
  "inglese_tra_virgolette": false

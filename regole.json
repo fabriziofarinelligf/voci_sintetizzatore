@@ -407,6 +407,22 @@
    "fonte": "p387-lavoro verifica-1",
    "pagina": "p387",
    "parola": "e ci o"
+  },
+  {
+   "da": "Pensaci,",
+   "a": "Pensaci.",
+   "motivo": "La lettera maiuscola 'I' dopo la virgola provoca un'intonazione errata e spezzata.",
+   "fonte": "p386-lavoro verifica-1",
+   "pagina": "p386",
+   "parola": "Pensaci, I"
+  },
+  {
+   "da": "custodi, Significa",
+   "a": "custodi: significa",
+   "motivo": "La maiuscola dopo la virgola fa fare una pausa innaturale e un cambio di tono errato.",
+   "fonte": "p386-lavoro verifica-1",
+   "pagina": "p386",
+   "parola": "Significa"
   }
  ],
  "inglese_tra_virgolette": false

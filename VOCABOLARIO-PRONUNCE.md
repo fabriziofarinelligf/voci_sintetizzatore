@@ -56,9 +56,6 @@ Questo file si rigenera con `python regole.py vocabolario`: non modificarlo a ma
 | l'a ti di di | l'ATDD | L'acronimo ATDD viene scandito lettera per lettera in modo innaturale. | p181 |
 | l'i a | l'intelligenza artificiale | La sequenza 'l'i a' viene fusa foneticamente e accentata come l'avverbio 'lì a'. | p52c |
 | l'i a: | l'IA: | L'acronimo IA viene letto staccato come 'i a' invece di essere pronunciato in modo naturale. | p52b |
-| le valuta | le vàluta | Verbo valutare: vàluta (valùta è la moneta); regola sul contesto per non toccare il sostantivo | lezioni |
-| li valuta | li vàluta | Come le valuta | lezioni |
-| lo valuta | lo vàluta | Come le valuta | lezioni |
 | Medium, | Medium | La virgola spezza il binomio Medium Feature con una pausa innaturale. | p179 |
 | Nell'11ª | Nell'undicesima | Il numero ordinale '11ª' viene letto erroneamente come 'unditro' anziché 'undicesima'. | p56 |
 | Nell'e ci o | nell'ECO di | La sigla dell'ECO è trascritta come 'e ci o' e letta come singole lettere staccate in modo poco naturale. | p387 |
@@ -79,8 +76,6 @@ Questo file si rigenera con `python regole.py vocabolario`: non modificarlo a ma
 | rmcls.com/agile-process-chart-game-v11. | r m c l s punto com barra agile process chart game v undici. | La lettura dell'URL risulta poco fluida e la dizione dell'inglese è troppo italianizzata. | p48 |
 | rmcls.com/game/process-chart-game-v12); | erre emme ci elle esse punto com slash game slash process chart game v dodici); | L'URL viene letto scorrettamente con 's' al posto degli slash e 'dodici' storpiato in 'dodigi'. | p44 |
 | scope. | scoup. | Termine inglese pronunciato all'italiana ('scop') anziché con dittongo corretto ('scoup'). | p54 |
-| si valuta | si vàluta | Come le valuta | lezioni |
-| Si valuta | Si vàluta | Come le valuta | lezioni |
 | simple | sìmpol | La parola inglese 'simple' viene letta all'italiana ('sìmple') anziché con fonetica inglese. | p56 |
 | Small, Story (iuser | Small Story (user | La virgola interrompe la continuità del titolo Small Story. | p179 |
 | spostano | spòstano | Accento errato sulla penultima sillaba: pronunciato 'spostàno' anziché 'spòstano'. | p87 |

@@ -25,9 +25,16 @@ Questo file si rigenera con `python regole.py vocabolario`: non modificarlo a ma
 | delìverabl | deliverable | La parola inglese 'deliverables' è scritta in modo fonetico errato 'delìverabl' e risulta pronunciata male. | p387 |
 | dieci punto zero | 10.000 | Ha letto 'dieci punto zero dollari' anziché 'diecimila dollari'. | p82 |
 | diviso undici diviso | novembre | La data espressa con gli slash 17/11/2025 viene letta letteralmente come 'diciassette diviso undici diviso duemilaventicinque'. | p52b |
+| domini | domìnii | Accento sbagliato: 'dòmini' invece di 'domìni' | lezioni |
+| Domini | Domìnii | Accento sbagliato: 'dòmini' invece di 'domìni' | lezioni |
+| driven | drìvn | Accento sulla prima sillaba, vocale finale quasi muta (Google: ˈdriv(ə)n) | lezioni |
 | e ci o | ECO | L'acronimo ECO viene scandito come 'e ci o' anziché letto come 'eco'. | p379 |
 | elaboration | ilèboreiscion | Pronuncia errata del termine inglese elaboration, accentato all'italiana/francese sulla sillaba finale. | p179 |
 | Executing | Exekyuting | Pronuncia inglese gravemente storpiata, pronunciata come 'exkitig'. | p91 |
+| Group | Grup | Group si legge con la u lunga (Google: ɡro͞op) | lezioni |
+| group | grup | Group si legge con la u lunga (Google: ɡro͞op) | lezioni |
+| Groups | Grups | Group si legge con la u lunga (Google: ɡro͞op) | lezioni |
+| groups | grups | Group si legge con la u lunga (Google: ɡro͞op) | lezioni |
 | Guide (8ª | Gaid (ottava | Pronuncia errata del termine inglese Guide come 'ghid' invece di 'gaid'. | p84 |
 | High-Level, | High-Level | La virgola separa il modificatore dal sostantivo creando una pausa anomala nel titolo. | p179 |
 | i Due; | due; | Lettura anomala 'i Due' per indicare il numero romano II | p380 |
@@ -49,11 +56,14 @@ Questo file si rigenera con `python regole.py vocabolario`: non modificarlo a ma
 | Nell'e ci o | nell'ECO di | La sigla dell'ECO è trascritta come 'e ci o' e letta come singole lettere staccate in modo poco naturale. | p387 |
 | Pensaci, | Pensaci. | La lettera maiuscola 'I' dopo la virgola provoca un'intonazione errata e spezzata. | p386 |
 | pi di u | pi-di-ù | La sintesi vocale legge 'pi di un' anziché 'pi di u'. | p432 |
+| pi emme bi o cappa | pi em bòk | PMBOK dopo --normalizza: letto lettera per lettera, va detto 'pi em bok' | lezioni |
 | pi emme i | PMI | L'acronimo PMI viene letto scandendo 'pi emme i' in maniera staccata. | p181 |
 | pi emme o. | pi-emme-o. | Pausa marcata prima di 'o' a chiusura di frase, con caduta d'intonazione sconnessa ('del pi emme... o'). | p58a |
 | Pimbok | P.M.B.O.K. | Acronimo letto 'Pimbok' anziché scansito o pronunciato correttamente | p382 |
 | Practices | Praktis | La parola inglese viene pronunciata in modo errato come 'practi-es'. | p105 |
 | Principles | Prinsipls | Pronuncia errata del termine inglese, reso come 'principlis'. | p105 |
+| Process | Pròses | Pronuncia inglese britannica: accento sulla prima sillaba (Google: ˈpräˌses) | lezioni |
+| process | pròses | Pronuncia inglese britannica: accento sulla prima sillaba (Google: ˈpräˌses) | lezioni |
 | quattrocento punto zero | 400.000 | Ha letto 'quattrocento punto zero dollari' anziché 'quattrocentomila dollari'. | p82 |
 | rmcls.com/agile-process-chart-game-v11. | r m c l s punto com barra agile process chart game v undici. | La lettura dell'URL risulta poco fluida e la dizione dell'inglese è troppo italianizzata. | p48 |
 | rmcls.com/game/process-chart-game-v12); | erre emme ci elle esse punto com slash game slash process chart game v dodici); | L'URL viene letto scorrettamente con 's' al posto degli slash e 'dodici' storpiato in 'dodigi'. | p44 |
@@ -66,5 +76,7 @@ Questo file si rigenera con `python regole.py vocabolario`: non modificarlo a ma
 | T6 | T sei | Il numero 6 viene letto come 'seis' anziché 'sei' o 'six' | p59 |
 | T6). | Ti sei). | Pronuncia errata della sigla 'T6', letta nuovamente 'ti seis'. | p60 |
 | user | iuser | La parola 'user' viene letta con la 'u' all'italiana ('ùser') invece della pronuncia corretta 'iùser', diversamente da come fatto nelle altre frasi. | p45 |
+| value | vèliu | Accento sulla prima sillaba (Google: ˈvalyo͞o) | lezioni |
+| Value | Vèliu | Accento sulla prima sillaba (Google: ˈvalyo͞o) | lezioni |
 | X2 | X due | Pronunciato in modo tronco e anomalo come 'iks du'. | p58a |
 | X3.tre | Ics tre punto tre | La lettera X viene pronunciata erroneamente 'icsi'. | p52c |

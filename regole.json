@@ -463,6 +463,102 @@
    "fonte": "p380-lavoro verifica-1",
    "pagina": "p380",
    "parola": "i Due"
+  },
+  {
+   "da": "pi emme bi o cappa",
+   "a": "pi em bòk",
+   "motivo": "PMBOK dopo --normalizza: letto lettera per lettera, va detto 'pi em bok'",
+   "fonte": "scelta di Fabrizio su campioni ascoltati, 2026-11-25/26",
+   "pagina": "lezioni",
+   "parola": "pi emme bi o cappa"
+  },
+  {
+   "da": "domini",
+   "a": "domìnii",
+   "motivo": "Accento sbagliato: 'dòmini' invece di 'domìni'",
+   "fonte": "scelta di Fabrizio su campioni ascoltati, 2026-11-25/26",
+   "pagina": "lezioni",
+   "parola": "domini"
+  },
+  {
+   "da": "Domini",
+   "a": "Domìnii",
+   "motivo": "Accento sbagliato: 'dòmini' invece di 'domìni'",
+   "fonte": "scelta di Fabrizio su campioni ascoltati, 2026-11-25/26",
+   "pagina": "lezioni",
+   "parola": "Domini"
+  },
+  {
+   "da": "Process",
+   "a": "Pròses",
+   "motivo": "Pronuncia inglese britannica: accento sulla prima sillaba (Google: ˈpräˌses)",
+   "fonte": "scelta di Fabrizio su campioni ascoltati, 2026-11-25/26",
+   "pagina": "lezioni",
+   "parola": "Process"
+  },
+  {
+   "da": "process",
+   "a": "pròses",
+   "motivo": "Pronuncia inglese britannica: accento sulla prima sillaba (Google: ˈpräˌses)",
+   "fonte": "scelta di Fabrizio su campioni ascoltati, 2026-11-25/26",
+   "pagina": "lezioni",
+   "parola": "process"
+  },
+  {
+   "da": "Group",
+   "a": "Grup",
+   "motivo": "Group si legge con la u lunga (Google: ɡro͞op)",
+   "fonte": "scelta di Fabrizio su campioni ascoltati, 2026-11-25/26",
+   "pagina": "lezioni",
+   "parola": "Group"
+  },
+  {
+   "da": "group",
+   "a": "grup",
+   "motivo": "Group si legge con la u lunga (Google: ɡro͞op)",
+   "fonte": "scelta di Fabrizio su campioni ascoltati, 2026-11-25/26",
+   "pagina": "lezioni",
+   "parola": "group"
+  },
+  {
+   "da": "Groups",
+   "a": "Grups",
+   "motivo": "Group si legge con la u lunga (Google: ɡro͞op)",
+   "fonte": "scelta di Fabrizio su campioni ascoltati, 2026-11-25/26",
+   "pagina": "lezioni",
+   "parola": "Groups"
+  },
+  {
+   "da": "groups",
+   "a": "grups",
+   "motivo": "Group si legge con la u lunga (Google: ɡro͞op)",
+   "fonte": "scelta di Fabrizio su campioni ascoltati, 2026-11-25/26",
+   "pagina": "lezioni",
+   "parola": "groups"
+  },
+  {
+   "da": "driven",
+   "a": "drìvn",
+   "motivo": "Accento sulla prima sillaba, vocale finale quasi muta (Google: ˈdriv(ə)n)",
+   "fonte": "scelta di Fabrizio su campioni ascoltati, 2026-11-25/26",
+   "pagina": "lezioni",
+   "parola": "driven"
+  },
+  {
+   "da": "value",
+   "a": "vèliu",
+   "motivo": "Accento sulla prima sillaba (Google: ˈvalyo͞o)",
+   "fonte": "scelta di Fabrizio su campioni ascoltati, 2026-11-25/26",
+   "pagina": "lezioni",
+   "parola": "value"
+  },
+  {
+   "da": "Value",
+   "a": "Vèliu",
+   "motivo": "Accento sulla prima sillaba (Google: ˈvalyo͞o)",
+   "fonte": "scelta di Fabrizio su campioni ascoltati, 2026-11-25/26",
+   "pagina": "lezioni",
+   "parola": "Value"
   }
  ],
  "inglese_tra_virgolette": false

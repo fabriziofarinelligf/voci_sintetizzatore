@@ -1,14 +1,6 @@
 {
  "sostituzioni": [
   {
-   "da": "deliverable",
-   "a": "delìverabl",
-   "motivo": "Pronuncia errata con accento tronco sulla sillaba finale ('deliverabèl')",
-   "fonte": "p42-lavoro verifica-1",
-   "pagina": "p42",
-   "parola": ""
-  },
-  {
    "da": "issue",
    "a": "isciu",
    "motivo": "Pronuncia errata del termine inglese ('isciò' invece di 'ìsciu')",
@@ -393,14 +385,6 @@
    "parola": "e ci o"
   },
   {
-   "da": "delìverabl",
-   "a": "deliverable",
-   "motivo": "La parola inglese 'deliverables' è scritta in modo fonetico errato 'delìverabl' e risulta pronunciata male.",
-   "fonte": "p387-lavoro verifica-1",
-   "pagina": "p387",
-   "parola": "delìverabl"
-  },
-  {
    "da": "Nell'e ci o",
    "a": "nell'ECO di",
    "motivo": "La sigla dell'ECO è trascritta come 'e ci o' e letta come singole lettere staccate in modo poco naturale.",
@@ -591,6 +575,94 @@
    "fonte": "scelta di Fabrizio su campioni ascoltati, 2026-11-26",
    "pagina": "lezioni",
    "parola": "iteration"
+  },
+  {
+   "da": "le valuta",
+   "a": "le vàluta",
+   "motivo": "Verbo valutare: vàluta (valùta è la moneta); regola sul contesto per non toccare il sostantivo",
+   "fonte": "scelta di Fabrizio su campioni ascoltati, 2026-11-26",
+   "pagina": "lezioni",
+   "parola": "valuta"
+  },
+  {
+   "da": "si valuta",
+   "a": "si vàluta",
+   "motivo": "Come le valuta",
+   "fonte": "scelta di Fabrizio su campioni ascoltati, 2026-11-26",
+   "pagina": "lezioni",
+   "parola": "valuta"
+  },
+  {
+   "da": "Si valuta",
+   "a": "Si vàluta",
+   "motivo": "Come le valuta",
+   "fonte": "scelta di Fabrizio su campioni ascoltati, 2026-11-26",
+   "pagina": "lezioni",
+   "parola": "valuta"
+  },
+  {
+   "da": "lo valuta",
+   "a": "lo vàluta",
+   "motivo": "Come le valuta",
+   "fonte": "scelta di Fabrizio su campioni ascoltati, 2026-11-26",
+   "pagina": "lezioni",
+   "parola": "valuta"
+  },
+  {
+   "da": "li valuta",
+   "a": "li vàluta",
+   "motivo": "Come le valuta",
+   "fonte": "scelta di Fabrizio su campioni ascoltati, 2026-11-26",
+   "pagina": "lezioni",
+   "parola": "valuta"
+  },
+  {
+   "da": "deliverable",
+   "a": "delìvrebol",
+   "motivo": "Pronuncia indicata da Fabrizio (Wiktionary dɪˈlɪvɹəbəl); sostituisce le due regole automatiche del 2026-11-15 che si annullavano",
+   "fonte": "scelta di Fabrizio su campioni ascoltati, 2026-11-26",
+   "pagina": "lezioni",
+   "parola": "deliverable"
+  },
+  {
+   "da": "Deliverable",
+   "a": "Delìvrebol",
+   "motivo": "Come deliverable",
+   "fonte": "scelta di Fabrizio su campioni ascoltati, 2026-11-26",
+   "pagina": "lezioni",
+   "parola": "deliverable"
+  },
+  {
+   "da": "deliverables",
+   "a": "delìvrebols",
+   "motivo": "Come deliverable, plurale",
+   "fonte": "scelta di Fabrizio su campioni ascoltati, 2026-11-26",
+   "pagina": "lezioni",
+   "parola": "deliverable"
+  },
+  {
+   "da": "retrospective",
+   "a": "retrospéctiv",
+   "motivo": "Inglese britannico (Wiktionary ˌɹɛtɹə(ʊ)ˈspɛktɪv); scrittura di Fabrizio",
+   "fonte": "scelta di Fabrizio su campioni ascoltati, 2026-11-26",
+   "pagina": "lezioni",
+   "parola": "retrospective"
+  },
+  {
+   "da": "Retrospective",
+   "a": "Retrospéctiv",
+   "motivo": "Come retrospective",
+   "fonte": "scelta di Fabrizio su campioni ascoltati, 2026-11-26",
+   "pagina": "lezioni",
+   "parola": "retrospective"
+  },
+  {
+   "da": "retrospectives",
+   "a": "retrospéctivs",
+   "motivo": "Come retrospective, plurale",
+   "fonte": "scelta di Fabrizio su campioni ascoltati, 2026-11-26",
+   "pagina": "lezioni",
+   "parola": "retrospective"
   }
  ],
  "inglese_tra_virgolette": false

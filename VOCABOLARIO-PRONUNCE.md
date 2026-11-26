@@ -20,9 +20,10 @@ Questo file si rigenera con `python regole.py vocabolario`: non modificarlo a ma
 | 20XX. | duemilaicsics. | La sigla segnaposto viene pronunciata in modo confuso e scorretto come 'venti la prix six'. | p83 |
 | agile, | agile. | La virgola fonde il titolo della rubrica con la frase successiva, creando una pausa innaturale tra 'ambienti' e 'agile'. | p87 |
 | custodi, Significa | custodi: significa | La maiuscola dopo la virgola fa fare una pausa innaturale e un cambio di tono errato. | p386 |
-| deliverable | delìverabl | Pronuncia errata con accento tronco sulla sillaba finale ('deliverabèl') | p42 |
+| deliverable | delìvrebol | Pronuncia indicata da Fabrizio (Wiktionary dɪˈlɪvɹəbəl); sostituisce le due regole automatiche del 2026-11-15 che si annullavano | lezioni |
+| Deliverable | Delìvrebol | Come deliverable | lezioni |
+| deliverables | delìvrebols | Come deliverable, plurale | lezioni |
 | dell'e ci o | dell'ECO | L'acronimo ECO viene sillabato lettera per lettera invece di essere letto come parola unica 'eco'. | p379 |
-| delìverabl | deliverable | La parola inglese 'deliverables' è scritta in modo fonetico errato 'delìverabl' e risulta pronunciata male. | p387 |
 | dieci punto zero | 10.000 | Ha letto 'dieci punto zero dollari' anziché 'diecimila dollari'. | p82 |
 | diviso undici diviso | novembre | La data espressa con gli slash 17/11/2025 viene letta letteralmente come 'diciassette diviso undici diviso duemilaventicinque'. | p52b |
 | domini | domìnii | Accento sbagliato: 'dòmini' invece di 'domìni' | lezioni |
@@ -55,6 +56,9 @@ Questo file si rigenera con `python regole.py vocabolario`: non modificarlo a ma
 | l'a ti di di | l'ATDD | L'acronimo ATDD viene scandito lettera per lettera in modo innaturale. | p181 |
 | l'i a | l'intelligenza artificiale | La sequenza 'l'i a' viene fusa foneticamente e accentata come l'avverbio 'lì a'. | p52c |
 | l'i a: | l'IA: | L'acronimo IA viene letto staccato come 'i a' invece di essere pronunciato in modo naturale. | p52b |
+| le valuta | le vàluta | Verbo valutare: vàluta (valùta è la moneta); regola sul contesto per non toccare il sostantivo | lezioni |
+| li valuta | li vàluta | Come le valuta | lezioni |
+| lo valuta | lo vàluta | Come le valuta | lezioni |
 | Medium, | Medium | La virgola spezza il binomio Medium Feature con una pausa innaturale. | p179 |
 | Nell'11ª | Nell'undicesima | Il numero ordinale '11ª' viene letto erroneamente come 'unditro' anziché 'undicesima'. | p56 |
 | Nell'e ci o | nell'ECO di | La sigla dell'ECO è trascritta come 'e ci o' e letta come singole lettere staccate in modo poco naturale. | p387 |
@@ -69,9 +73,14 @@ Questo file si rigenera con `python regole.py vocabolario`: non modificarlo a ma
 | Process | Pròses | Pronuncia inglese britannica: accento sulla prima sillaba (Google: ˈpräˌses) | lezioni |
 | process | pròses | Pronuncia inglese britannica: accento sulla prima sillaba (Google: ˈpräˌses) | lezioni |
 | quattrocento punto zero | 400.000 | Ha letto 'quattrocento punto zero dollari' anziché 'quattrocentomila dollari'. | p82 |
+| retrospective | retrospéctiv | Inglese britannico (Wiktionary ˌɹɛtɹə(ʊ)ˈspɛktɪv); scrittura di Fabrizio | lezioni |
+| Retrospective | Retrospéctiv | Come retrospective | lezioni |
+| retrospectives | retrospéctivs | Come retrospective, plurale | lezioni |
 | rmcls.com/agile-process-chart-game-v11. | r m c l s punto com barra agile process chart game v undici. | La lettura dell'URL risulta poco fluida e la dizione dell'inglese è troppo italianizzata. | p48 |
 | rmcls.com/game/process-chart-game-v12); | erre emme ci elle esse punto com slash game slash process chart game v dodici); | L'URL viene letto scorrettamente con 's' al posto degli slash e 'dodici' storpiato in 'dodigi'. | p44 |
 | scope. | scoup. | Termine inglese pronunciato all'italiana ('scop') anziché con dittongo corretto ('scoup'). | p54 |
+| si valuta | si vàluta | Come le valuta | lezioni |
+| Si valuta | Si vàluta | Come le valuta | lezioni |
 | simple | sìmpol | La parola inglese 'simple' viene letta all'italiana ('sìmple') anziché con fonetica inglese. | p56 |
 | Small, Story (iuser | Small Story (user | La virgola interrompe la continuità del titolo Small Story. | p179 |
 | spostano | spòstano | Accento errato sulla penultima sillaba: pronunciato 'spostàno' anziché 'spòstano'. | p87 |

@@ -27,7 +27,7 @@ Questo file si rigenera con `python regole.py vocabolario`: non modificarlo a ma
 | diviso undici diviso | novembre | La data espressa con gli slash 17/11/2025 viene letta letteralmente come 'diciassette diviso undici diviso duemilaventicinque'. | p52b |
 | domini | domìnii | Accento sbagliato: 'dòmini' invece di 'domìni' | lezioni |
 | Domini | Domìnii | Accento sbagliato: 'dòmini' invece di 'domìni' | lezioni |
-| driven | drìvn | Accento sulla prima sillaba, vocale finale quasi muta (Google: ˈdriv(ə)n) | lezioni |
+| driven | drìven | Accento sulla prima sillaba (Google: ˈdriv(ə)n); scelta 'drìven' a orecchio | lezioni |
 | e ci o | ECO | L'acronimo ECO viene scandito come 'e ci o' anziché letto come 'eco'. | p379 |
 | elaboration | ilèboreiscion | Pronuncia errata del termine inglese elaboration, accentato all'italiana/francese sulla sillaba finale. | p179 |
 | Executing | Exekyuting | Pronuncia inglese gravemente storpiata, pronunciata come 'exkitig'. | p91 |

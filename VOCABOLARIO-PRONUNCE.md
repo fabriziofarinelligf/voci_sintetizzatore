@@ -31,6 +31,7 @@ Questo file si rigenera con `python regole.py vocabolario`: non modificarlo a ma
 | e ci o | ECO | L'acronimo ECO viene scandito come 'e ci o' anziché letto come 'eco'. | p379 |
 | elaboration | ilèboreiscion | Pronuncia errata del termine inglese elaboration, accentato all'italiana/francese sulla sillaba finale. | p179 |
 | Executing | Exekyuting | Pronuncia inglese gravemente storpiata, pronunciata come 'exkitig'. | p91 |
+| faticano | fatìcano | Accento sdrucciolo: fatìcano, non faticàno | lezioni |
 | Group | Grup | Group si legge con la u lunga (Google: ɡro͞op) | lezioni |
 | group | grup | Group si legge con la u lunga (Google: ɡro͞op) | lezioni |
 | Groups | Grups | Group si legge con la u lunga (Google: ɡro͞op) | lezioni |
@@ -45,6 +46,9 @@ Questo file si rigenera con `python regole.py vocabolario`: non modificarlo a ma
 | intermedi) | intermèdi) | Accento errato sulla vocale, pronunciato come 'intermedì-i' anziché 'intermèdi' | p86 |
 | issue | isciu | Pronuncia errata del termine inglese ('isciò' invece di 'ìsciu') | p42 |
 | Issue | Issiu | Pronuncia errata del termine inglese, pronunciato 'isio' anziché 'ish-ue'/'issiu' | p89 |
+| iteration | iterèiscen | Inglese britannico (Wiktionary ɪtəɹˈeɪʃən); scelta 'iterèiscen' a orecchio | lezioni |
+| Iteration | Iterèiscen | Come iteration, maiuscola | lezioni |
+| iterations | iterèiscens | Come iteration, plurale | lezioni |
 | Key | Kii | La parola inglese 'Key' viene letta come 'Chi' anziché con la corretta pronuncia inglese. | p52 |
 | l'11ª | l'undicesima | Allucinazione nella lettura del testo: legge 'Blondeta' anziché 'l'undicesima'. | p91 |
 | L'11ª | l'undicesima | Letto erroneamente come 'undipre' invece di 'undicesima'. | p54 |
